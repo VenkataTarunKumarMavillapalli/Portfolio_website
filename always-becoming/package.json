@@ -1,0 +1,8 @@
+{
+ "name":"venkata-always-becoming",
+ "version":"1.0.0",
+ "private":true,
+ "description":"A dependency-free cinematic personal autobiography, ready for GitHub Pages.",
+ "scripts":{"start":"node tools/serve.mjs","check":"node --check assets/content.js && node --check assets/motion.js && node --check assets/app.js"},
+ "engines":{"node":">=18"}
+}
