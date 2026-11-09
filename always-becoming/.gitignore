@@ -1,11 +1,9 @@
-.DS_Store
-Thumbs.db
 node_modules/
-__pycache__/
-*.pyc
+dist/
+*.tsbuildinfo
 .env
 .env.*
-*.pem
-*.key
-private/
-*.log
+!.env.example
+.DS_Store
+coverage/
+.qa-*

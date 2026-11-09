@@ -1,0 +1,123 @@
+name: Review or publish Becoming
+
+# No push, pull_request, schedule, or workflow_run publication trigger.
+# Keep this file at the REPOSITORY ROOT when the app is in always-becoming/.
+on:
+  workflow_dispatch:
+    inputs:
+      app_directory:
+        description: "Source location: always-becoming for the existing repository; . for a standalone app"
+        required: true
+        type: choice
+        default: always-becoming
+        options:
+          - always-becoming
+          - "."
+      publish:
+        description: "Publish the reviewed artifact (requires the github-pages environment approval)"
+        required: true
+        type: boolean
+        default: false
+
+permissions:
+  contents: read
+
+concurrency:
+  group: github-pages
+  cancel-in-progress: false
+
+jobs:
+  build:
+    name: Check and prepare Pages artifact
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - name: Check out the manually selected ref
+        uses: actions/checkout@v4
+      - name: Set up Node.js 24
+        uses: actions/setup-node@v4
+        with:
+          node-version: "24"
+          cache: npm
+          cache-dependency-path: ${{ inputs.app_directory }}/package-lock.json
+      - name: Install locked dependencies
+        run: npm ci
+        working-directory: ${{ inputs.app_directory }}
+      - name: Typecheck
+        run: npm run typecheck
+        working-directory: ${{ inputs.app_directory }}
+      - name: Test
+        run: npm test
+        working-directory: ${{ inputs.app_directory }}
+      - name: Build
+        run: npm run build
+        working-directory: ${{ inputs.app_directory }}
+      - name: Stage static files without publishing application source
+        env:
+          APP_DIRECTORY: ${{ inputs.app_directory }}
+        shell: bash
+        run: |
+          python3 - <<'PY'
+          import os
+          import shutil
+          from pathlib import Path
+
+          root = Path.cwd()
+          app_directory = os.environ['APP_DIRECTORY']
+          if app_directory not in {'.', 'always-becoming'}:
+              raise SystemExit('Unsupported source location')
+          dist = root / app_directory / 'dist'
+          if not (dist / 'index.html').is_file():
+              raise SystemExit('Expected production index.html is missing')
+          stage = root / '_site'
+          stage.mkdir()
+
+          def copy_tree(source, target):
+              if source.is_symlink() or any(p.is_symlink() for p in source.rglob('*')):
+                  raise SystemExit(f'Symlinks are not accepted in the Pages artifact: {source}')
+              shutil.copytree(source, target, dirs_exist_ok=True)
+
+          if app_directory == '.':
+              copy_tree(dist, stage)
+          else:
+              # Preserve the known legacy root site; publish the new app beneath it.
+              # Deliberately exclude root source/configuration and the old app tree.
+              static_suffixes = {'.html', '.css', '.js', '.map', '.gz', '.ico',
+                                 '.svg', '.png', '.webp', '.jpg', '.jpeg', '.txt', '.xml'}
+              for source in root.iterdir():
+                  if source.is_file() and (source.suffix.lower() in static_suffixes
+                                           or source.name in {'CNAME', '.nojekyll'}):
+                      if source.is_symlink():
+                          raise SystemExit(f'Symlink is not accepted: {source}')
+                      shutil.copy2(source, stage / source.name)
+              if (root / 'assets').is_dir():
+                  copy_tree(root / 'assets', stage / 'assets')
+              if not (stage / 'index.html').is_file():
+                  raise SystemExit('Nested mode requires the existing root index.html')
+              copy_tree(dist, stage / 'always-becoming')
+          (stage / '.nojekyll').touch()
+          PY
+      - name: Upload reviewable Pages artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: _site
+          retention-days: 7
+
+  deploy:
+    name: Publish only after explicit manual selection and environment review
+    if: ${{ inputs.publish }}
+    needs: build
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    permissions:
+      pages: write
+      id-token: write
+    # Configure required reviewers in repository Settings → Environments.
+    # This declaration alone does not create a reviewer protection rule.
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Deploy approved Pages artifact
+        id: deployment
+        uses: actions/deploy-pages@v4

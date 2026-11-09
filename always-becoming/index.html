@@ -1,92 +1,45 @@
 <!doctype html>
 <html lang="en">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#101310">
-  <meta name="description" content="Venkata Tarun Kumar Mavillapalli. A personal journey through engineering, research and AI for international public service. 27 years, still becoming.">
-  <meta name="color-scheme" content="dark light">
-  <meta property="og:title" content="Venkata — Always Becoming">
-  <meta property="og:description" content="An interactive personal journey. From Hyderabad to engineering, research and international public service.">
-  <meta property="og:type" content="website">
-  <title>Venkata — Always Becoming</title>
-  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
-  <link rel="stylesheet" href="assets/styles.css">
-  <script src="assets/content.js" defer></script>
-  <script src="assets/land.js" defer></script>
-  <script src="assets/motion.js" defer></script>
-  <script src="assets/app.js" defer></script>
-</head>
-<body>
-  <a class="skip-link" href="#main">Skip to content</a>
-  <div class="reading-progress" aria-hidden="true"><i id="readingProgress"></i></div>
-  <header class="site-header" id="header">
-    <a class="wordmark" href="#home" aria-label="Venkata, home"><span class="monogram">v<span>·</span></span><span>VENKATA<span class="wordmark-sub">IN THE MAKING</span></span></a>
-    <nav class="desktop-nav" aria-label="Main navigation"><a href="#story">The story</a><a href="#coordinates">Coordinates</a><a href="#work">Selected work</a><a href="#human">The person</a></nav>
-    <div class="header-actions"><button class="motion-toggle" id="motionToggle" aria-pressed="true" aria-label="Pause ambient motion"><span class="motion-bars" aria-hidden="true"><i></i><i></i><i></i></span><span id="motionLabel">Motion on</span></button><button class="round-button menu-toggle" id="menuToggle" aria-label="Open navigation" aria-expanded="false"><span></span><span></span></button><button class="profile-button" data-open="profile">At a glance <span aria-hidden="true">↗</span></button></div>
-  </header>
-  <nav class="mobile-nav" id="mobileNav" aria-label="Mobile navigation" hidden><a href="#story">The story <span>01</span></a><a href="#coordinates">Coordinates <span>02</span></a><a href="#purpose">The WFP chapter <span>03</span></a><a href="#work">Selected work <span>04</span></a><a href="#human">The person <span>05</span></a><a href="#contact">Connect <span>06</span></a><button data-open="profile">Professional overview ↗</button></nav>
-  <main id="main">
-    <section class="hero section-dark" id="home" aria-labelledby="heroTitle">
-      <div class="hero-grid" aria-hidden="true"></div>
-      <div class="hero-topline"><span><i class="live-dot"></i> A PERSONAL STORY, STILL UNFOLDING</span><span>1999 — 2026 <span class="small-cross">✳</span></span></div>
-      <div class="hero-copy">
-        <p class="eyebrow hero-name">VENKATA TARUN KUMAR MAVILLAPALLI</p>
-        <h1 id="heroTitle"><span class="hero-line">Always</span><span class="hero-line serif accent">becoming.</span></h1>
-        <p class="hero-description">An engineer’s mind.<br>A researcher’s curiosity.<br>A life bigger than a job title.</p>
-        <a class="button button-lime magnetic" href="#story">Explore my story <span aria-hidden="true">↘</span></a>
-      </div>
-      <div class="hero-art" id="heroArt">
-        <div class="art-orbit orbit-one" aria-hidden="true"></div><div class="art-orbit orbit-two" aria-hidden="true"></div>
-        <canvas id="sculpture" aria-label="An interactive generative sculpture representing an evolving life" role="img"></canvas>
-        <div class="sculpture-fallback" id="sculptureFallback" hidden aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></div>
-        <div class="art-coordinate art-coordinate-top"><span>FIG. 01</span><span>CONTINUOUS EVOLUTION</span></div>
-        <div class="art-coordinate art-coordinate-bottom"><span id="formCaption">A THREAD, NEVER A STRAIGHT LINE.</span><span>LIVE / GENERATIVE</span></div>
-        <div class="shape-controls" aria-label="Sculpture shape"><button class="active" data-form="0" aria-pressed="true">Thread</button><button data-form="1" aria-pressed="false">Orbit</button><button data-form="2" aria-pressed="false">Become</button></div>
-      </div>
-      <div class="hero-bottom"><div class="edition"><span class="edition-number">27<span>↗</span></span><span>YEARS OF LIFE.<br>NOT THE FINAL FORM.</span></div><div class="current-role"><span class="eyebrow">THE CURRENT CHAPTER</span><p>AI Consultant <span>·</span> WFP / OIG</p></div><a class="scroll-hint" href="#story"><span>SCROLL TO BEGIN</span><span class="scroll-line" aria-hidden="true"></span></a></div>
-    </section>
-    <div class="ticker" aria-hidden="true"><div class="ticker-track"><span>ENGINEERING</span><b>✳</b><span>CURIOSITY</span><b>✳</b><span>RESEARCH</span><b>✳</b><span>PUBLIC PURPOSE</span><b>✳</b><span>ALWAYS BECOMING</span><b>✳</b><span>ENGINEERING</span><b>✳</b><span>CURIOSITY</span><b>✳</b><span>RESEARCH</span><b>✳</b><span>PUBLIC PURPOSE</span><b>✳</b><span>ALWAYS BECOMING</span><b>✳</b></div></div>
-    <section class="story section-light section-pad" id="story" aria-labelledby="storyTitle">
-      <div class="section-label"><span>01 / THE STORY</span><span>SEVEN CHAPTERS · ONE EVOLVING PERSON</span></div>
-      <div class="section-heading"><h2 class="reveal" id="storyTitle">Not a straight line.<br><span class="serif">A story in motion.</span></h2><p class="reveal section-intro">From Hyderabad to international public service. The places, disciplines and experiences along the way.</p></div>
-      <div class="chapter-tabs" id="chapterTabs" role="tablist" aria-label="Life chapters"></div>
-      <div class="chapter-view" role="tabpanel" id="chapterPanel" aria-labelledby="chapter-tab-0" tabindex="0">
-        <div class="chapter-visual" id="chapterVisual"><span class="visual-caption">A CHAPTER, ABSTRACTED.</span><canvas id="chapterCanvas" aria-hidden="true"></canvas><span class="chapter-large-year" id="chapterLargeYear">1999</span><span class="chapter-visual-location" id="chapterVisualLocation">HYDERABAD, INDIA</span><span class="visual-corner" aria-hidden="true">+</span></div>
-        <div class="chapter-content"><div class="chapter-content-top"><span class="eyebrow" id="chapterKicker">01 / THE FIRST COORDINATE</span><span class="chapter-count" id="chapterCount">01 / 07</span></div><h3 id="chapterTitle">Every story starts<br>somewhere.</h3><p class="chapter-body" id="chapterText"></p><p class="chapter-detail" id="chapterDetail"></p><div class="milestones" id="chapterMilestones"></div><p class="chapter-reflection serif" id="chapterReflection"></p></div>
-      </div>
-      <div class="chapter-footer"><p>Some chapters overlap. Life rarely follows a perfect timeline.</p><div class="chapter-controls"><button class="text-button" id="narrateButton"><span aria-hidden="true">◖))</span> Listen</button><button class="text-button" id="playChapters" aria-pressed="false"><span aria-hidden="true">▷</span> Play chapters</button><button class="round-button" id="prevChapter" aria-label="Previous chapter">←</button><button class="round-button" id="nextChapter" aria-label="Next chapter">→</button></div></div>
-      <p class="sr-only" id="storyStatus" role="status"></p>
-    </section>
-    <section class="coordinates section-dark section-pad" id="coordinates" aria-labelledby="coordinatesTitle">
-      <div class="section-label"><span>02 / COORDINATES</span><span>PLACES CHANGE PERSPECTIVES.</span></div>
-      <div class="coordinates-layout"><div class="coordinates-copy"><h2 class="reveal" id="coordinatesTitle">A life,<br><span class="serif accent">in coordinates.</span></h2><p class="muted coordinates-intro">Not a list of destinations.<br>A map of experiences.</p><div class="city-list" id="cityList" aria-label="Explore locations"></div><div class="map-note">Select a place to turn the globe.<br>Connections are biographical, not a travel itinerary.</div></div><div class="globe-space"><canvas id="globe" role="img" aria-label="Rotating globe showing places in Venkata’s education and career"></canvas><div class="globe-decoration" aria-hidden="true"><span>17° N / 78° E</span><span>EVERYWHERE, SOMETHING LEARNED.</span></div><div class="location-card" id="locationCard"><span class="eyebrow" id="cityCountry">INDIA</span><h3 id="cityTitle">Hyderabad</h3><p id="cityNote">Origins and professional software engineering.</p><button class="text-button" id="cityChapter">Open this chapter <span aria-hidden="true">↗</span></button></div><div class="globe-controls"><button class="round-button" id="rotateLeft" aria-label="Rotate globe left">←</button><span>DRAG TO EXPLORE</span><button class="round-button" id="rotateRight" aria-label="Rotate globe right">→</button></div></div></div>
-    </section>
-    <section class="purpose section-pad" id="purpose" aria-labelledby="purposeTitle">
-      <div class="purpose-grid" aria-hidden="true"></div>
-      <div class="section-label"><span>03 / THE WFP CHAPTER</span><span>TECHNOLOGY WITH RESPONSIBILITY</span></div>
-      <div class="purpose-main"><div class="purpose-marker reveal"><span class="purpose-number">01</span><span>HUMAN JUDGMENT<br>AT THE CENTRE</span><div class="purpose-cross" aria-hidden="true">✳</div></div><div><p class="eyebrow reveal">WORLD FOOD PROGRAMME · OFFICE OF INSPECTOR GENERAL</p><h2 class="reveal" id="purposeTitle">Not just<br>what AI <span class="serif">can do.</span><br>What it <span class="serif">should do.</span></h2><p class="purpose-text reveal">Working in oversight changes the question. A system must be useful—but also traceable, understandable and built around the people responsible for the decisions.</p></div></div>
-      <div class="principles"><article class="reveal"><span>01</span><h3>Keep the source.</h3><p>An answer is stronger when a person can examine where it came from.</p></article><article class="reveal"><span>02</span><h3>Keep the human.</h3><p>Technology can support judgment. It does not inherit responsibility.</p></article><article class="reveal"><span>03</span><h3>Keep the context.</h3><p>Information becomes useful when its limits and setting remain visible.</p></article></div>
-      <p class="purpose-note">Personal professional perspective. Not an official statement of WFP policy.</p>
-    </section>
-    <section class="work section-dark section-pad" id="work" aria-labelledby="workTitle">
-      <div class="section-label"><span>04 / THE INTERACTIVE LAB</span><span>EXPLANATIONS YOU CAN EXPLORE.</span></div>
-      <div class="section-heading"><h2 class="reveal" id="workTitle">Less description.<br><span class="serif accent">More discovery.</span></h2><div class="section-intro reveal"><p>Four fields of work.<br>Four small, working experiments.</p><span class="synthetic-label"><i></i> SYNTHETIC DEMOS ONLY</span></div></div>
-      <div class="project-grid" id="projectGrid"></div>
-      <div class="lab-footnote"><span>NO LIVE INSTITUTIONAL SYSTEMS. NO REAL EVIDENCE.</span><p>These original miniatures explain technical approaches. They do not reproduce internal applications or represent organisational results.</p></div>
-    </section>
-    <section class="human section-light section-pad" id="human" aria-labelledby="humanTitle">
-      <div class="section-label"><span>05 / BEYOND THE TITLE</span><span>A PERSON, NOT A TECH STACK.</span></div>
-      <div class="human-layout"><div class="identity-art reveal" aria-hidden="true"><div class="identity-ring ring-a"></div><div class="identity-ring ring-b"></div><span class="identity-v">v<span>·</span></span><span class="identity-caption">DIFFERENT CONTEXTS.<br>THE SAME PERSON.</span><span class="identity-coordinate">17.385° N<br>78.487° E</span></div><div class="human-copy"><h2 class="reveal" id="humanTitle">Venkata at work.<br><span class="serif">Tarun at home.</span></h2><p class="human-lead reveal">Two names. One evolving story.</p><p class="reveal">At work, it is Venkata. With family, it is Tarun. The professional chapters matter—but they are not the entirety of a person.</p><p class="reveal">This is a record of learning across places and disciplines: software engineering, research, product development, data and AI. A record that still has room to grow.</p><div class="human-note reveal"><span class="eyebrow">NOT THE FINAL FORM</span><p class="serif">The next chapter is still being written.</p></div></div></div>
-    </section>
-    <section class="contact section-dark section-pad" id="contact" aria-labelledby="contactTitle"><div class="contact-orb" aria-hidden="true"></div><div class="section-label"><span>06 / AN OPEN ENDING</span><span>THE STORY CONTINUES.</span></div><p class="eyebrow reveal">A CONVERSATION CAN BE THE START OF SOMETHING.</p><h2 class="reveal" id="contactTitle">What comes<br><span class="serif accent">next?</span><span class="contact-asterisk" aria-hidden="true">✳</span></h2><div class="contact-row"><a class="button button-lime magnetic" id="emailLink" href="mailto:mvtkop760@gmail.com">Let’s connect <span aria-hidden="true">↗</span></a><button class="text-button" data-open="profile">Read the professional overview ↗</button><div class="social-links" id="socialLinks"></div></div><footer><div class="footer-top"><a class="footer-name" href="#home">VENKATA<span>↑ BACK TO THE BEGINNING</span></a><span>27 YEARS OF BECOMING · 2026 EDITION</span></div><div class="footer-bottom"><p>Independent personal website. Not an official website of, or endorsed by, the United Nations, WFP or EFSA. Institutional names describe professional and educational experience.</p><button class="text-button" data-open="about">About this experience ↗</button></div></footer></section>
-  </main>
-  <button class="guide-trigger" id="guideTrigger" aria-label="Open the story guide"><span aria-hidden="true">✳</span><span>Ask the archive</span></button>
-  <dialog class="modal profile-modal" id="profileDialog" aria-labelledby="profileTitle"><div class="modal-top"><span class="eyebrow">THE PROFESSIONAL OVERVIEW</span><button class="close-button" data-close aria-label="Close professional overview">×</button></div><div id="profileContent"></div></dialog>
-  <dialog class="modal project-modal" id="projectDialog" aria-labelledby="projectModalTitle"><div class="modal-top"><span class="eyebrow" id="projectModalTag">THE LAB</span><button class="close-button" data-close aria-label="Close project">×</button></div><div id="projectModalContent"></div></dialog>
-  <dialog class="modal guide-modal" id="guideDialog" aria-labelledby="guideTitle"><div class="modal-top"><span class="eyebrow">A GUIDE TO THE STORY</span><button class="close-button" data-close aria-label="Close guide">×</button></div><h2 id="guideTitle">Ask the <span class="serif accent">archive.</span></h2><p class="guide-description">Curated answers from this biography.<br>A local guide, not a generative AI assistant.</p><div class="guide-suggestions" id="guideSuggestions"></div><div class="guide-messages" id="guideMessages" role="log" aria-label="Guide conversation" aria-live="polite"></div><form id="guideForm" class="guide-form"><label for="guideInput" class="sr-only">Ask about Venkata’s education, experience or projects</label><input id="guideInput" name="question" maxlength="300" autocomplete="off" placeholder="Education, the WFP chapter, earlier work…"><button type="submit" aria-label="Ask the guide">↗</button></form><p class="guide-privacy">Your question stays in this page. Nothing is sent to a server.</p></dialog>
-  <dialog class="modal about-modal" id="aboutDialog" aria-labelledby="aboutTitle"><div class="modal-top"><span class="eyebrow">BEHIND THE EXPERIENCE</span><button class="close-button" data-close aria-label="Close information">×</button></div><h2 id="aboutTitle">A living <span class="serif accent">personal archive.</span></h2><p>This 2026 edition follows Venkata’s life and professional journey through information he supplied. It is an independent personal portfolio, not an institutional publication.</p><h3>Designed to be explored</h3><p>The sculpture is generated in real time. The map shows biographical locations, not exact travel routes. Illustrations are abstract artwork—not photographs of real events. No personal photos have been invented.</p><h3>About the demonstrations</h3><p>The project lab uses fictional data and deterministic interactions. It contains no private institutional data, real evidence, production connections, API keys or live AI services.</p><h3>Your controls</h3><p>Use the Motion button to pause ambient movement. System reduced-motion preferences are respected. “Listen” uses an available local browser voice, after you click it; availability varies by browser and device. All chapter text is also readable without narration.</p><h3>Privacy</h3><p>No analytics, cookies, tracking pixels, external fonts or network-based AI. Only the motion preference is stored on this device. The archive guide runs locally. Email opens your own email app.</p><h3>Credits</h3><p>Original code-generated artwork. Globe land data: Natural Earth, public domain. Fonts: your device’s system fonts.</p></dialog>
-  <div class="toast" id="toast" role="status"></div>
-  <noscript><div class="noscript-note">The interactive scenes need JavaScript. The main narrative remains readable. For the full biography, open <a href="profile.html">the professional overview</a>.</div></noscript>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#090b0e" />
+    <meta
+      name="description"
+      content="Venkata Tarun Kumar Mavillapalli. 27 years of becoming: an independent, interactive life story through Hyderabad, education, engineering, data and responsible AI."
+    />
+    <title>Venkata · 27 Years of Becoming</title>
+    <link rel="icon" type="image/svg+xml" href="./favicon.svg" />
+  </head>
+  <body>
+    <div id="root"></div>
+    <noscript
+      ><main
+        style="
+          max-width: 700px;
+          margin: 12vh auto;
+          padding: 24px;
+          font: 18px/1.7 system-ui;
+          color: #eee;
+          background: #090b0e;
+        "
+      >
+        <h1>Venkata · 27 Years of Becoming</h1>
+        <p>
+          This interactive journey uses JavaScript. A complete professional
+          overview is also available as a simple document.
+        </p>
+        <p>
+          <a style="color: #e8c8a0" href="./profile.html"
+            >Read the professional overview</a
+          >
+        </p>
+        <p>
+          Independent personal website. Not an official or endorsed publication
+          of the UN, WFP or EFSA.
+        </p>
+      </main></noscript
+    >
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
 </html>

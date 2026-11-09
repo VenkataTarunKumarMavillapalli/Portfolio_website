@@ -1,127 +1,77 @@
-# Venkata — Always Becoming
+# 27 Years of Becoming
 
-A cinematic, interactive personal autobiography. **27 years of life. Not the final form.**
+A cinematic personal portfolio for Venkata Tarun Kumar Mavillapalli. This 2026 edition follows a continuous visual thread from Hyderabad through study, engineering, research, international public service and AI consultancy.
 
-The 2026 edition follows Venkata Tarun Kumar Mavillapalli through Hyderabad, international study, enterprise engineering, research, product development, EFSA and AI work at WFP / OIG.
+**This is a source project and a review build, not a published website.** Publication needs the content and technical review in [PUBLICATION_CHECKLIST.md](PUBLICATION_CHECKLIST.md). No deployment is implied by these files.
 
-## Open it
+## Run locally
 
-Unzip this project and open `index.html` in a current desktop browser. There is no installation step, build process, account, API key or backend. The separate `Venkata-Always-Becoming.html` delivery is a fully self-contained preview of the same experience.
-
-For a local web server, use either:
+Use **Node.js 24** and the committed npm lockfile:
 
 ```bash
-npm start
-# Open http://127.0.0.1:4173
+npm ci
+npm run dev
 ```
 
-or:
-
-```bash
-python -m http.server 8000 --bind 127.0.0.1
-# Open http://127.0.0.1:8000
-```
-
-`npm start` requires Node.js 18 or newer. It does **not** require `npm install`.
-
-## Publish on GitHub Pages
-
-1. Create a repository, for example `venkata-portfolio`. A public repository is the simplest GitHub Free setup.
-2. Upload the **contents** of this extracted folder. `index.html`, `assets/`, `profile.html` and `.nojekyll` must be at the repository root—not inside another `venkata-in-the-making` folder. Commit to `main`.
-3. Open the repository’s **Settings → Pages**.
-4. Under **Build and deployment**, set **Source → Deploy from a branch**.
-5. Select **main** and **/(root)**, then **Save**.
-6. Open the published address shown by GitHub. The expected project-site pattern is:
-
-```text
-https://YOUR-GITHUB-USERNAME.github.io/venkata-portfolio/
-```
-
-All asset paths are relative, so the site supports a project-repository subpath without configuration changes. No Actions workflow is necessary for this static build. Do not upload only the ZIP; upload its extracted contents.
-
-For an account homepage, use the repository name `YOUR-GITHUB-USERNAME.github.io` instead. The same files work.
-
-Official GitHub publishing instructions:
-
-```text
-https://docs.github.com/en/pages/getting-started-with-github-pages/configuring-a-publishing-source-for-your-github-pages-site
-```
-
-**The delivered project has not been pushed to your account or deployed.** GitHub account settings, custom domains and public publication are still your actions.
-
-## Explore the experience
-
-- **The opening sculpture:** live 3D geometry that morphs between Thread, Orbit and Become. Pointer movement changes its orientation. WebGL is preferred; a real, animated Canvas 3D-projection fallback preserves the three shapes without WebGL.
-- **Seven life chapters:** a keyboard-accessible timeline with original generative artwork, milestones, previous/next controls, optional 11-second chapter playback and local-device narration when a suitable voice exists.
-- **Coordinates:** an interactive globe using bundled public-domain land data. Select locations, drag horizontally or use the rotation arrows. Each place links to its chapter. Connections represent biographical associations, not exact travel itineraries.
-- **The WFP chapter:** a personal perspective on source traceability, context and human responsibility. It is not institutional policy or an official publication.
-- **Four working miniatures:** inspect a fictional source, filter synthetic analytical data and download CSV, select events in a fictional timeline, and run a workflow that stops for human approval.
-- **The person:** Venkata professionally, Tarun within the family; abstract identity artwork instead of invented portraits.
-- **Professional overview:** a fast alternative to the narrative, downloadable text and a printable document. The browser’s print dialog can save it as PDF.
-- **Ask the archive:** a deterministic local guide to the supplied biography. It is explicitly **not** a live AI assistant. Unknown questions are not answered with invented facts.
-
-The Motion control pauses ambient movement. Device reduced-motion preferences are respected. No autoplay audio, scroll interception or mandatory introductory loader.
-
-## Edit the content
-
-| File | What to edit |
-| --- | --- |
-| `assets/content.js` | Biography chapters, locations, project descriptions, guide answers, email and verified social URLs |
-| `index.html` | Hero copy, fixed section headings, personal philosophy text, the 2026 / 27-year edition labels and institutional disclaimer |
-| `assets/app.js` | UI behaviour, synthetic demos, and the concise `experience` / `education` arrays used in the professional overview |
-| `assets/styles.css` | Colours, typography, spacing, responsive layouts and animation treatment |
-| `assets/motion.js` | 3D sculpture, chapter artwork, globe projection and motion controls |
-| `assets/land.js` | Bundled map coastlines and points; normally leave unchanged |
-| `profile.html` / `professional-overview.txt` | Static, script-free versions of the professional overview; keep in sync when editing career details |
-
-Most editorial changes belong in `content.js`; some fixed landing-page copy is intentionally authored in `index.html`. The profile summary is separately curated in `app.js`. Changing one file does not automatically rewrite the other copies.
-
-The contact email is taken from the supplied résumé. Review it before publication. `linkedin` and `github` are blank because exact verified profile URLs were not supplied. Their links are omitted automatically until full `https://...` URLs are added.
-
-The “27” is an **edition marker for 2026**, not an automatically updated age. The site deliberately does not publish a precise date of birth.
-
-## Adding personal photography
-
-The delivered artwork is abstract and generated in code. No photographs of Venkata, childhood, family or real events have been fabricated. Replace an abstract chapter panel with a real image only after choosing an appropriate photo and confirming permission to publish it. Give the image meaningful alternative text and remove private metadata before publishing.
-
-Early life is intentionally restrained because detailed childhood memories have not been supplied. Do not fill that gap with invented anecdotes, quotations or achievements.
-
-## Regenerate the single-file preview
-
-After changing the source, run:
-
-```bash
-python tools/build-preview.py
-```
-
-The output is `Venkata-Always-Becoming.html` in the parent folder. To choose a destination:
-
-```bash
-python tools/build-preview.py ./preview.html
-```
-
-This embeds the existing CSS, JavaScript, map data and favicon. No network access or third-party Python packages are used.
-
-## Check JavaScript syntax
+Open the address printed by Vite. To check and preview the production output:
 
 ```bash
 npm run check
+npm run preview
 ```
 
-See `TEST_REPORT.md` for the browser checks actually performed on this delivery. Syntax checking alone is not a replacement for those interaction and visual checks.
+`npm run check` runs TypeScript, Vitest and a production build. `npm run build` creates `dist/`. Serve that directory over HTTP; opening the source `index.html` directly from the filesystem is not supported. No API keys, account, backend or environment file is required by the application.
 
-## Privacy and publication boundaries
+## Experience and implementation status
 
-The site contains no tracking, analytics, cookies, externally hosted fonts, model API calls or live institutional connections. Its only persistent application storage is the motion preference in `localStorage`; the code handles browsers where storage is unavailable. The guide’s questions remain in page memory until the page is closed or reloaded.
+The [storyboard](docs/STORYBOARD.md) defines a prologue and nine chapters within one reversible, native-scroll journey. The current implementation uses React and TypeScript, Vite, GSAP ScrollTrigger, React Three Fiber / Three.js and Motion. It is not the older static seven-chapter site already in the repository.
 
-Narration uses only local English voices reported by the browser, and only after the visitor presses Listen. Voice availability varies. Email links open the visitor’s own email application; there is no contact-form server.
+The complete review implementation includes:
 
-All investigation-related examples are fictional. Internal record counts, private endpoints, real case data, internal screenshots and proprietary evidence are excluded. The public role description and high-level work descriptions still deserve the owner’s publication review. See `PUBLICATION_CHECKLIST.md`.
+- A prologue and all nine chapters, chapter navigation, a living year selector for 1999–2026, professional overview and native dialogs.
+- Accessible HTML location controls alongside a procedural globe, with city-level biographical associations rather than exact travel routes.
+- A motion control, device reduced-motion handling, reading mode and a genuine Canvas 2D perspective-rendered 3D fallback when WebGL is unavailable. Add `?graphics=off` to open directly in reading mode.
+- A downloadable professional overview and a printable profile. Neither is represented as the owner's uploaded formal résumé.
+- Nine chapters of owner-supplied public biography and explicit empty slots for missing childhood stories, photos, interests, reflections and project details.
+- Integrated memory archives, four service-workflow steps, learning strands, a mathematical structure control, data-quality inspection and the UN principles panel.
+- Six working, local lab panels: source-grounded retrieval, analytics/relationships, forensic chronology, briefing preparation, a human-gated workflow and architecture/governance. Their records and behavior are deterministic and fictional.
 
-A private repository is not a guarantee that its GitHub Pages site is private. Treat the published site, its source, downloads and comments as public.
+**Review status:** all nine chapters and their panels are integrated, and the development-only chapter restriction has been removed. The software-rendered prologue → origins → globe transition passed forward/reverse visual review; all ten fallback poses were rendered at 1180 × 757. All six labs and all 28 timeline years were exercised in the browser. See [QA_REPORT.md](QA_REPORT.md) for exact coverage and remaining checks.
 
-## Technical choices
+The completed review run, repeated after the mobile CSS and source-formatting changes, passed **232 tests across eight suites**, TypeScript and the production build. A separate clean source copy installed the committed lockfile with Node.js 24 using cached registry packages and passed the same checks. Coverage includes app reduced-motion/graphics-off/focus behavior, React panels, software drawing commands and journey geometry. `npm audit --omit=dev` reported zero vulnerabilities; that is not a security audit. Narrow browser layouts at 400 × 596 and 333 × 497 were inspected without horizontal dialog overflow, and mobile controls now follow natural page flow.
 
-This is a static HTML/CSS/JavaScript implementation rather than a server-rendered React application. Native WebGL, Canvas, SVG and CSS deliver the visual treatment without runtime package dependencies, third-party CDNs, build infrastructure or hosting secrets. A three-dimensional fallback is part of the product, not a screenshot of the main visual.
+The production build was served under `/always-becoming/`: lazy JavaScript/CSS, the graphics fallback and printable profile loaded correctly. Actual-browser reading mode mounted no canvas and preserved the current chapter. All eight UN principles and their source example were exercised. Final production-browser input checks passed: pointer drag visibly rotates the globe, clicking the London marker opens its correct biographical dialog, and HTML rotation/city controls respond. An invisible SVG layer that intercepted pointer input was corrected; TypeScript, all 232 tests and the build passed again afterward.
 
-The application is intended for current browsers. Six viewport widths were tested in Chromium emulation; physical iPhone/Safari testing, a formal accessibility audit and live GitHub deployment were not performed in this session.
+The cloud test browser has WebGL disabled: actual GPU rendering, Safari, physical mobile devices, performance and context-loss recovery remain unverified. The WebGL dependency chunk also retains a size warning. **This is not a production-readiness claim.** See the QA report for recorded results and remaining release checks.
+
+## Public content boundaries
+
+This is an **independent personal project**, not an official United Nations, WFP or EFSA website. Institutional references do not imply endorsement. Abstract scenes are artwork, not photographs or reconstructions of institutional premises.
+
+Every laboratory record is fictional and every demonstration runs locally. There are no model calls, production connections, internal documents, real investigations or real approvals. The source contains no analytics or tracking integration. The app stores only its motion preference locally; demonstrations are page-local state. The contact link opens the visitor's email client and does not send a message automatically.
+
+The supplied historical WFP internship office wording is **Office of Inspections and Investigations**, flagged for owner verification. Do not silently replace it with the current consultancy's **Office of Inspector General**. Exact dates, role descriptions and public claims need final owner review.
+
+Still missing: approved personal photographs, childhood and school stories, personal reflections and interests, detailed personal/research project descriptions, a verified LinkedIn profile and a formal résumé selected for this build. Empty fields are intentional. The repository link is known; a personal GitHub profile is a separate field and must not be inferred from it.
+
+## Edit and maintain
+
+- [Content editing](docs/CONTENT_EDITING.md): biography, photos, projects, links and synthetic examples.
+- [Deployment](docs/DEPLOYMENT.md): standalone versus the existing repository's `always-becoming/` directory, manual Pages workflow and rollback.
+- [Publication checklist](PUBLICATION_CHECKLIST.md): accuracy, privacy, browser QA and explicit release approval.
+- [QA report](QA_REPORT.md): completed automated/browser checks and explicit verification limits.
+- [Storyboard](docs/STORYBOARD.md): camera beats, interaction goals and visual validation gates.
+
+`vite.config.ts` sets `base: './'`. Public downloads use `import.meta.env.BASE_URL`; preserve that convention. There is no SPA router dependency or history-path routing. Navigation uses section anchors and local state, so GitHub Pages does not need a custom rewrite or a copied `404.html`.
+
+## GitHub integration
+
+The intended destination is the existing repository's **`always-becoming/`** directory. Preserve its legacy root HTML, assets and other root files. The supplied workflow is a template at `.github/workflows/deploy-pages.yml`; when integrated, it belongs at the **repository root**, not inside `always-becoming/.github/`.
+
+The workflow accepts a manual `workflow_dispatch` only. Its default is build-only; publication requires an explicit publish selection and the `github-pages` environment. Configure that environment's approval protections before any publication. A workflow file naming an environment does not itself add a required reviewer.
+
+This source is prepared for an isolated public review branch. Main, repository settings and live deployment are outside this review change. Current remote inspection details and limitations are recorded in [Deployment](docs/DEPLOYMENT.md).
+
+## Attribution
+
+Bundled geographic coastlines are derived from Natural Earth public-domain data. Procedural scene geometry is abstract visual illustration. Do not add third-party photography, logos, fonts or models without checking their license and keeping appropriate credit.
