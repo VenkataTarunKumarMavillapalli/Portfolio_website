@@ -1,0 +1,2 @@
+import Link from "next/link";
+export default function NotFound(){return <section className="empty-state not-found"><p className="eyebrow">404 · A little off the path</p><h1>This page isn't here.</h1><p>You can return to the beginning or explore the work collection.</p><div className="actions center"><Link href="/" className="button primary">Back to home</Link><Link href="/work/" className="button secondary">Explore my work</Link></div></section>;}

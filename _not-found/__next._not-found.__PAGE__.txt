@@ -1,0 +1,6 @@
+1:"$Sreact.fragment"
+2:I[8500,["500","static/chunks/500-c99b8dfd3de17c86.js","38","static/chunks/38-92d112495394960d.js","437","static/chunks/437-b38fe2875c4fef38.js","974","static/chunks/app/page-d8878e3dbf4a74a4.js"],""]
+3:I[484,[],"OutletBoundary"]
+4:"$Sreact.suspense"
+0:{"rsc":["$","$1","c",{"children":[["$","section",null,{"className":"empty-state not-found","children":[["$","p",null,{"className":"eyebrow","children":"404 · A little off the path"}],["$","h1",null,{"children":"This page isn't here."}],["$","p",null,{"children":"You can return to the beginning or explore the work collection."}],["$","div",null,{"className":"actions center","children":[["$","$L2",null,{"href":"/","className":"button primary","children":"Back to home"}],["$","$L2",null,{"href":"/work/","className":"button secondary","children":"Explore my work"}]]}]]}],null,["$","$L3",null,{"children":["$","$4",null,{"name":"Next.MetadataOutlet","children":"$@5"}]}]]}],"isPartial":false,"staleTime":300,"varyParams":null,"buildId":"Q4LIgakxwH1TrygJ_cwBh"}
+5:null

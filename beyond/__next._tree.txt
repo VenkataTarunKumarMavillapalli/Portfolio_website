@@ -1,0 +1,2 @@
+:HL["/Portfolio_website/_next/static/css/329af53d082f398f.css","style"]
+0:{"tree":{"name":"","param":null,"prefetchHints":16,"slots":{"children":{"name":"beyond","param":null,"prefetchHints":0,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":0,"slots":null}}}}},"staleTime":300,"buildId":"Q4LIgakxwH1TrygJ_cwBh"}
