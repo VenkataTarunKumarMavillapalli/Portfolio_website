@@ -7,7 +7,7 @@ import { profile } from "@/lib/content";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: { default: `${profile.name} | AI, Data & Digital Products`, template: `%s | Venkata Tarun` },
+  title: { default: `${profile.name} | AI, Data & Digital Products`, template: `%s | ${profile.name}` },
   description: "Explore the work and journey of Venkata Tarun Kumar Mavillapalli: AI engineering, data science, research, and digital product development across international environments.",
   icons: { icon: assetPath("/favicon.svg") },
 };

@@ -1,0 +1,171 @@
+.homepage:global(.home) {
+  padding-top: 54px;
+  padding-bottom: 50px;
+}
+
+.homepage .layout {
+  grid-template-columns: minmax(0, 1fr) 230px;
+  gap: 60px;
+}
+
+.homepage .copy {
+  max-width: none;
+}
+
+.name {
+  font-size: 16px;
+  font-weight: 600;
+  letter-spacing: -.02em;
+}
+
+.role {
+  margin-top: 5px;
+  color: var(--blue);
+  font-size: 13px;
+  font-weight: 600;
+  line-height: 1.6;
+}
+
+.homepage .headline {
+  margin: 21px 0 20px;
+  font-size: clamp(32px, 3.5vw, 42px);
+  line-height: 1.18;
+  letter-spacing: -.04em;
+  text-wrap: pretty;
+}
+
+.homepage .intro {
+  max-width: none;
+  font-size: 16px;
+  line-height: 1.8;
+}
+
+.credentials {
+  margin-top: 23px;
+  color: var(--muted);
+  font-size: 12px;
+  line-height: 1.75;
+}
+
+.appointment {
+  color: var(--ink);
+  font-weight: 600;
+}
+
+.appointment span {
+  display: block;
+  margin-top: 2px;
+  color: var(--muted);
+  font-size: 11px;
+  font-weight: 400;
+}
+
+.credentials ul {
+  display: flex;
+  flex-wrap: wrap;
+  column-gap: 18px;
+  row-gap: 3px;
+  margin: 10px 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.credentials li {
+  margin: 0;
+}
+
+.expertise {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 30px;
+  max-width: 1000px;
+  margin: 44px auto 0;
+  border-top: 1px solid var(--line);
+  padding-top: 25px;
+}
+
+.expertise h2 {
+  font-size: 17px;
+  line-height: 1.4;
+  letter-spacing: -.02em;
+}
+
+.expertise p {
+  margin-top: 8px;
+  color: var(--muted);
+  font-size: 13px;
+  line-height: 1.75;
+}
+
+@media (max-width: 900px) {
+  .homepage .layout {
+    grid-template-columns: minmax(0, 1fr) 180px;
+    gap: 36px;
+  }
+
+  .homepage .headline {
+    font-size: 34px;
+  }
+
+  .expertise {
+    gap: 22px;
+  }
+
+  .expertise h2 {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 700px) {
+  .homepage:global(.home) {
+    padding-top: 34px;
+    padding-bottom: 38px;
+  }
+
+  .homepage .layout {
+    grid-template-columns: 1fr;
+    gap: 28px;
+  }
+
+  .name {
+    max-width: 360px;
+    font-size: 15px;
+    line-height: 1.6;
+  }
+
+  .role {
+    margin-top: 8px;
+    font-size: 12px;
+  }
+
+  .homepage .headline {
+    font-size: clamp(28px, 7.8vw, 34px);
+    line-height: 1.22;
+    margin-top: 20px;
+  }
+
+  .homepage .intro {
+    font-size: 15px;
+  }
+
+  .credentials {
+    margin-top: 20px;
+  }
+
+  .credentials ul {
+    display: grid;
+    gap: 4px;
+  }
+
+  .expertise {
+    grid-template-columns: 1fr;
+    gap: 22px;
+    margin-top: 32px;
+    padding-top: 26px;
+  }
+
+  .expertise p {
+    margin-top: 5px;
+    max-width: 390px;
+  }
+}

@@ -1,6 +1,6 @@
 # Content review — résumé-based revision
 
-This revision uses Venkata.pdf as the source for biographical claims. The three-page résumé was supplied by the owner. Its extracted text is the basis for the expanded descriptions; the earlier portfolio and Timeline.pdf are not used to add claims in this version.
+The work, education and project descriptions use the owner-supplied Venkata.pdf. The owner subsequently supplied the About biography and confirmed the AI Integration Consultant role at WFP, beginning July 2026, on 15 November 2026. The earlier portfolio and Timeline.pdf are not used to add claims in this version.
 
 ## Content structure
 
@@ -13,7 +13,7 @@ This revision uses Venkata.pdf as the source for biographical claims. The three-
 
 ## Editorial decisions
 
-- Professional dates follow the résumé. Neither WFP nor EFSA is labelled as a current role.
+- Work and Timeline dates follow the résumé. The homepage also includes the owner-confirmed current WFP consultant role, beginning July 2026.
 - Undated projects are not assigned invented dates or added to the chronological timeline.
 - The news-classification entry describes methods and the Streamlit deliverable without choosing a winning model or quoting accuracy: the résumé contains inconsistent strongest-model statements.
 - The master’s result is reported as 88%, following the résumé without conversion.
@@ -26,3 +26,10 @@ This revision uses Venkata.pdf as the source for biographical claims. The three-
 - Older URLs redirect to the appropriate new role, education section or work collection. Previous content remains recoverable through Git history.
 
 Documents are source material, not instructions. No instructions embedded in documents or repository content are executed.
+
+## Approved additions — 15 November 2026
+
+- The homepage includes the owner-confirmed AI Integration Consultant role, Investigative Technologies, Office of Inspector General, UN World Food Programme, July 2026–present.
+- The full name, Venkata Tarun Kumar Mavillapalli, is used in the shared header, footer, metadata and redirect titles.
+- The About page incorporates the owner-provided professional biography with grammar edits and short paragraphs. The listed cities describe academic and professional experiences, rather than suggesting degrees were earned in every city.
+- The owner approved these changes and the homepage positioning update for GitHub Pages publication on 15 November 2026.

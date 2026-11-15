@@ -1,4 +1,4 @@
-# Venkata Tarun — Personal Website
+# Venkata Tarun Kumar Mavillapalli — Personal Website
 
 A personal portfolio and growing life archive, adapted from the supplied OIGI Next.js website. The original project remains separate.
 

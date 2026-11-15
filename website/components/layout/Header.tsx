@@ -2,7 +2,7 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
-import { navigation } from "@/lib/content";
+import { navigation, profile } from "@/lib/content";
 import { Shell } from "@/components/ui/Shell";
 export function Header() {
   const pathname = usePathname();
@@ -14,7 +14,7 @@ export function Header() {
     return () => window.removeEventListener("keydown", close);
   }, [open]);
   return <header className="site-header"><Shell className="header-inner">
-    <Link className="wordmark" href="/" aria-label="Venkata Tarun, home">Venkata Tarun<span>.</span></Link>
+    <Link className="wordmark" href="/" aria-label={`${profile.name}, home`}>{profile.name}<span aria-hidden="true">.</span></Link>
     <button id="menu-toggle" className="menu-toggle" type="button" aria-expanded={open} aria-controls="primary-nav" onClick={() => setOpen(!open)}>{open ? "Close" : "Menu"}</button>
     <nav id="primary-nav" aria-label="Main navigation" className={open ? "main-nav is-open" : "main-nav"}>
       {navigation.map(item => {

@@ -39,5 +39,5 @@ const redirects = {
 for (const [file, target] of Object.entries(redirects)) {
   const destination = `${basePath}/${target}`;
   mkdirSync(new URL(`../out/${file.substring(0, file.lastIndexOf("/") + 1)}`, import.meta.url), { recursive: true });
-  writeFileSync(new URL(`../out/${file}`, import.meta.url), `<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Venkata Tarun — Page moved</title><meta http-equiv="refresh" content="0;url=${destination}"><link rel="canonical" href="https://venkatatarunkumarmavillapalli.github.io${destination}"></head><body><h1>This page has moved.</h1><p><a href="${destination}">Continue to the new portfolio</a></p></body></html>\n`);
+  writeFileSync(new URL(`../out/${file}`, import.meta.url), `<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Venkata Tarun Kumar Mavillapalli — Page moved</title><meta http-equiv="refresh" content="0;url=${destination}"><link rel="canonical" href="https://venkatatarunkumarmavillapalli.github.io${destination}"></head><body><h1>This page has moved.</h1><p><a href="${destination}">Continue to the new portfolio</a></p></body></html>\n`);
 }

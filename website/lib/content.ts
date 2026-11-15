@@ -8,7 +8,6 @@ export type WorkItem = {
 
 export const profile = {
   "name": "Venkata Tarun Kumar Mavillapalli",
-  "shortName": "Venkata Tarun",
   "role": "AI Engineer & Data Professional",
   "email": "mvtkop760@gmail.com",
   "github": "https://github.com/VenkataTarunKumarMavillapalli",

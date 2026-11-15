@@ -14,3 +14,13 @@
 - Static route, asset, anchor and heading checks are recorded in `static-check.json`.
 
 GitHub Pages publication and live verification are reported in the chat once the deployment completes. Earlier pages are retained in Git history, and prior public URLs have redirects where content was consolidated.
+
+## Approved homepage, name and biography update — 15 November 2026
+
+- Production GitHub Pages build and TypeScript checks passed.
+- Full name verified in shared headers, footers, page titles and legacy redirect titles.
+- All six main pages and the WFP detail page checked on mobile; navigation opens and closes correctly.
+- Responsive widths of 358, 375, 769, 901 and 1280 CSS pixels checked with no horizontal overflow or clipped names.
+- Desktop and mobile homepage and About layouts inspected visually.
+- Static name and local-link checks passed for all 41 exported HTML files.
+- The owner approved publication after reviewing the updated draft.
