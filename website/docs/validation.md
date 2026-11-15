@@ -1,5 +1,15 @@
 # Validation — simplified résumé-based portfolio
 
+## Project code links and contact simplification — 15 November 2026
+
+- Production GitHub Pages build and TypeScript checks passed; all 42 exported HTML pages passed local link, asset, anchor and heading checks.
+- Verified all six project GitHub destinations are accessible and exactly match the résumé annotations. Each project card and detail page includes a new-tab code link with `noopener noreferrer`.
+- Confirmed the Projects filter shows all six code links; the Data Analyst Agent detail link works. Experience entries do not receive project repository links.
+- Removed the email action buttons and unused client component. The email address remains a working mailto link.
+- Desktop Work and Home and mobile Work, project detail, Contact, Home, Learning and Timeline were inspected. All checked mobile routes fit at 375 CSS pixels without horizontal overflow or broken images. No browser errors were observed.
+- Refined glass gradients, blurred surfaces and border highlights without changing page structure. Added reduced-transparency fallbacks for the enhanced surfaces.
+- Public résumé PDF is byte-for-byte unchanged for this update; the original desktop résumé was not edited.
+
 15 November 2026.
 
 - Production build and TypeScript checks passed after the layout and content rewrite.

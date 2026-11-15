@@ -85,10 +85,14 @@
   border: 1px solid rgba(255, 255, 255, .94);
   border-radius: 20px;
   padding: 25px 8px;
-  background: rgba(255, 255, 255, .7);
+  background: linear-gradient(135deg, rgba(255, 255, 255, .87), rgba(255, 255, 255, .52));
   box-shadow: 0 18px 50px rgba(24, 48, 80, .07), inset 0 1px 0 white;
-  -webkit-backdrop-filter: blur(20px);
-  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px) saturate(120%);
+  backdrop-filter: blur(20px) saturate(120%);
+}
+
+@media (prefers-reduced-transparency:reduce) {
+  .expertise { background: #fff; -webkit-backdrop-filter: none; backdrop-filter: none; }
 }
 
 .expertise>div { padding: 0 22px; }

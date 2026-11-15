@@ -2,7 +2,7 @@
 export type WorkItem = {
   slug: string; title: string; organisation: string; role: string;
   kind: "Experience" | "Project"; period: string; start: number | null; end: number | null;
-  location: string; summary: string; overview: string[];
+  location: string; summary: string; overview: string[]; repositoryUrl?: string;
   sections: { title: string; text: string }[]; tools: string[]; closing: string; source: string[];
 };
 
@@ -384,7 +384,8 @@ export const work: WorkItem[] = [
     "closing": "The result was a customised agent-based assistant with data connections, session handling and supporting Azure infrastructure.",
     "source": [
       "resume:2"
-    ]
+    ],
+    "repositoryUrl": "https://github.com/VenkataTarunKumarMavillapalli/Data-Analyst-AI-Agent-with-Enterprise-Security-Microsoft-Azure-AI"
   },
   {
     "slug": "financial-reports-copilot",
@@ -428,7 +429,8 @@ export const work: WorkItem[] = [
     "closing": "The project brought together document retrieval, application services and operational tooling in a customised version of the Microsoft accelerator.",
     "source": [
       "resume:2"
-    ]
+    ],
+    "repositoryUrl": "https://github.com/VenkataTarunKumarMavillapalli/Copilot-for-Financial-Reports-Advanced-RAG-Microsoft-Azure-AI-Services"
   },
   {
     "slug": "course-recommender",
@@ -470,7 +472,8 @@ export const work: WorkItem[] = [
     "closing": "The project compared several ways of making recommendations and presented the work as a capstone study.",
     "source": [
       "resume:2"
-    ]
+    ],
+    "repositoryUrl": "https://github.com/VenkataTarunKumarMavillapalli/Professional-Certificates-Capstone-Projects/tree/main/IBM-Machine-Learning-Professional-Certificate-Capstone-Project-main"
   },
   {
     "slug": "news-classification",
@@ -512,7 +515,8 @@ export const work: WorkItem[] = [
     "closing": "The project combined an analysis workflow, model comparisons and an interactive way to explore classification results.",
     "source": [
       "resume:2"
-    ]
+    ],
+    "repositoryUrl": "https://github.com/VenkataTarunKumarMavillapalli/M.SC-UNINA-DataScience-Projects/tree/main/Data-Mining-Real-Fake-News-Classification"
   },
   {
     "slug": "colony-weight-forecasting",
@@ -553,7 +557,8 @@ export const work: WorkItem[] = [
     "closing": "The deliverables were a predictive model and an interactive dashboard for exploring the time series.",
     "source": [
       "resume:2"
-    ]
+    ],
+    "repositoryUrl": "https://github.com/VenkataTarunKumarMavillapalli/M.SC-UNINA-DataScience-Projects/tree/main/Forecasting-Weight-Dynamics-and-Visualizing-Historical-Data-A-Time-Series-Analysis-main"
   },
   {
     "slug": "google-fiber-bi",
@@ -594,7 +599,8 @@ export const work: WorkItem[] = [
     "closing": "The project produced structured planning documents and dashboards that explained repeat-call patterns.",
     "source": [
       "resume:2"
-    ]
+    ],
+    "repositoryUrl": "https://github.com/VenkataTarunKumarMavillapalli/Professional-Certificates-Capstone-Projects/tree/main/Google-Business-Intelligence-Project-Google-Fiber-main"
   }
 ];
 

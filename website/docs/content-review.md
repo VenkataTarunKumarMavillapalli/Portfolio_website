@@ -1,5 +1,12 @@
 # Content review — résumé-based revision
 
+## Project links and contact cleanup — 15 November 2026
+
+- Added the six project GitHub URLs embedded in the original résumé to their matching Work cards and detail pages. These are personal project destinations, not institutional work repositories.
+- Removed “Write an email” and “Copy email address” buttons as requested. Kept the new email address clickable.
+- Applied a restrained glass surface refinement while retaining content, titles, navigation, portrait, colors and layout.
+- No experience descriptions, credential destinations or résumé PDFs were changed. Publication was explicitly requested by the owner.
+
 The work, education and project descriptions use the owner-supplied Venkata.pdf. The owner subsequently supplied the About biography and confirmed the AI Integration Consultant role at WFP, beginning July 2026, on 15 November 2026. The earlier portfolio and Timeline.pdf are not used to add claims in this version.
 
 ## Content structure

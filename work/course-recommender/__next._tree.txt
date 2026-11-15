@@ -1,2 +1,2 @@
-:HL["/Portfolio_website/_next/static/css/921d80182cd5b9d1.css","style"]
-0:{"tree":{"name":"","param":null,"prefetchHints":16,"slots":{"children":{"name":"work","param":null,"prefetchHints":0,"slots":{"children":{"name":"slug","param":{"type":"d","key":"course-recommender","siblings":null},"prefetchHints":0,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":0,"slots":null}}}}}}},"staleTime":300,"buildId":"zwv2NBVlxtBB3pAoCfvCl"}
+:HL["/Portfolio_website/_next/static/css/ff4282598309e93f.css","style"]
+0:{"tree":{"name":"","param":null,"prefetchHints":16,"slots":{"children":{"name":"work","param":null,"prefetchHints":0,"slots":{"children":{"name":"slug","param":{"type":"d","key":"course-recommender","siblings":null},"prefetchHints":0,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":0,"slots":null}}}}}}},"staleTime":300,"buildId":"jmBYotdicuobarUWj6Kyx"}
