@@ -1,5 +1,14 @@
 # Validation — simplified résumé-based portfolio
 
+## Stronger glass finish — 15 November 2026
+
+- Changed only the shared surface stylesheet and homepage expertise styling; content, components, layout rules, imagery, links and résumé PDFs remain unchanged.
+- Added ambient blue light behind translucent surfaces, stronger reflective borders, deeper soft shadows and consistent glass on headers, page headings, cards, controls and footer. No animations or dependencies were added.
+- Production GitHub Pages build and TypeScript checks passed. All 42 exported pages passed local link, asset, anchor and heading checks; their text, links and HTML structure match the previous build.
+- Compared the bounds of headings, paragraphs, links, controls, header and footer against the previous build on all six main pages and a project detail page, at 1910 and 375 CSS pixels. All 14 comparisons matched, with no overflow or broken images.
+- Visually inspected Home, About, Work, Timeline and Contact; verified 18 timeline events expand, mobile navigation opens/closes and six project code links remain present. No browser console errors observed.
+- Kept readable opaque fallbacks for browsers without backdrop blur and for reduced-transparency preferences.
+
 ## Project code links and contact simplification — 15 November 2026
 
 - Production GitHub Pages build and TypeScript checks passed; all 42 exported HTML pages passed local link, asset, anchor and heading checks.
