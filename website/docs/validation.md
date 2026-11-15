@@ -34,3 +34,14 @@ GitHub Pages publication and live verification are reported in the chat once the
 - Timeline shows 18 total events and seven Work events. Verified the new consultant entry is first in newest order and last in oldest order, its details expand, and its detail-page link works.
 - Checked the homepage, About, Work, Timeline, consultant detail and longer WFP/EFSA detail headings at 375 CSS pixels with no overflow or broken images. Desktop homepage inspected visually.
 - Homepage H1 is exactly “Enterprise AI Engineer & AI Solutions Architect”.
+
+## Role detail, contact, credential links and glass surfaces — 15 November 2026
+
+- Production build and TypeScript check passed. All 42 exported HTML pages passed local asset/link/anchor/heading checks.
+- All five credential URLs match the original PDF annotations exactly and returned HTTP 200. Learning titles and verification links open the provider in a new tab; expanded Timeline certification entries expose the same URLs.
+- No old email remains in generated HTML, scripts or route data. Contact mailto and copy actions use the new email.
+- Eight main/detail routes checked at 375 CSS pixels with no horizontal overflow or broken images. Desktop and 769-pixel tablet layouts inspected; responsive overrides reset after testing.
+- Verified mobile navigation, contact copy status, certification timeline filtering/expansion and five outgoing credential links. No browser errors observed.
+- Removed WFP operational figures and scope from the earlier internship description. The expanded consultant narrative stays at public professional-focus level. No institutional reference content was copied into the portfolio.
+- Rebuilt the public résumé from verified portfolio information as a clean two-page PDF, with only public role summaries, education, credentials and project names. Both pages were rendered and visually inspected. The five original certification links are included; no confidential WFP operational details are present.
+- Confirmed the original desktop résumé is byte-for-byte unchanged from the original supplied copy. It is not the public download.

@@ -4,8 +4,8 @@
 }
 
 .homepage .layout {
-  grid-template-columns: minmax(0, 1fr) 230px;
-  gap: 60px;
+  grid-template-columns: minmax(0, 1fr) 250px;
+  gap: 52px;
 }
 
 .homepage .copy {
@@ -73,15 +73,26 @@
   margin: 0;
 }
 
+.credentials a { text-decoration: underline; text-decoration-color: #b3c7e5; text-underline-offset: 4px; }
+.credentials a:hover { color: var(--blue); }
+
 .expertise {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 30px;
+  gap: 0;
   max-width: 1000px;
   margin: 44px auto 0;
-  border-top: 1px solid var(--line);
-  padding-top: 25px;
+  border: 1px solid rgba(255, 255, 255, .94);
+  border-radius: 20px;
+  padding: 25px 8px;
+  background: rgba(255, 255, 255, .7);
+  box-shadow: 0 18px 50px rgba(24, 48, 80, .07), inset 0 1px 0 white;
+  -webkit-backdrop-filter: blur(20px);
+  backdrop-filter: blur(20px);
 }
+
+.expertise>div { padding: 0 22px; }
+.expertise>div+div { border-left: 1px solid #dfe7f2; }
 
 .expertise h2 {
   font-size: 17px;
@@ -107,7 +118,7 @@
   }
 
   .expertise {
-    gap: 22px;
+    gap: 0;
   }
 
   .expertise h2 {
@@ -153,8 +164,11 @@
     grid-template-columns: 1fr;
     gap: 22px;
     margin-top: 32px;
-    padding-top: 26px;
+    padding: 22px;
   }
+
+  .expertise>div { padding: 0; }
+  .expertise>div+div { border-left: 0; border-top: 1px solid #dfe7f2; padding-top: 22px; }
 
   .expertise p {
     margin-top: 5px;

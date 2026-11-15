@@ -9,7 +9,7 @@ export type WorkItem = {
 export const profile = {
   "name": "Venkata Tarun Kumar Mavillapalli",
   "role": "AI Engineer & Data Professional",
-  "email": "mvtkop760@gmail.com",
+  "email": "venkatatarunkumarmavillapalli@gmail.com",
   "github": "https://github.com/VenkataTarunKumarMavillapalli",
   "linkedin": "https://www.linkedin.com/in/venkata-tarun-kumar-mavillapalli-967b4613a/"
 };
@@ -52,16 +52,41 @@ export const work: WorkItem[] = [
     "start": 202607,
     "end": null,
     "location": "",
-    "summary": "I work on AI integration for investigative technologies in WFP’s Office of Inspector General.",
+    "summary": "I help turn AI capabilities into practical, dependable tools for investigative and oversight work, with a focus on useful answers, careful handling of information and human review.",
     "overview": [
-      "Since July 2026, I have been an AI Integration Consultant in Investigative Technologies at the World Food Programme’s Office of Inspector General.",
-      "This role follows my AI engineering internship at WFP, which ran from October 2025 to June 2026."
+      "Since July 2026, I have worked as an AI Integration Consultant in Investigative Technologies at the World Food Programme’s Office of Inspector General. My focus is on bringing AI, organisational knowledge and everyday workflows together in ways that people can understand and use.",
+      "I approach this work as an engineering task: understand what people need, connect the right tools and information, and check that the result is reliable enough for its intended use. This role follows my AI engineering internship at WFP from October 2025 to June 2026."
     ],
-    "sections": [],
-    "tools": [],
-    "closing": "",
+    "sections": [
+      {
+        "title": "Connecting AI with the right information",
+        "text": "A useful AI assistant needs more than a capable language model. It needs relevant information and a clear way to show where an answer came from. My work focuses on retrieval-augmented generation (RAG): finding useful material, giving the model that context and keeping supporting references visible. Microsoft Foundry and Azure AI Search are central to my wider AI engineering work."
+      },
+      {
+        "title": "Making agents useful in everyday work",
+        "text": "I focus on connecting AI agents with tools and workflows so they can help with a task, rather than only produce a reply. That means thinking through the steps involved, what information each step needs and where a person should make the final decision. The goal is to reduce repetitive effort while keeping the work understandable and reviewable."
+      },
+      {
+        "title": "Checking quality and protecting information",
+        "text": "I pay attention to how an AI system behaves when information is missing, unclear or outside its scope. Evaluation, access controls and human review are part of that approach. An answer should be checked against its sources, and the system should make its limits clear instead of presenting uncertain output as fact."
+      },
+      {
+        "title": "Supporting reliable use over time",
+        "text": "Building the first version is only part of the work. I also focus on clear documentation, testing, feedback and visibility into how a system is behaving. These help teams understand the tools, identify problems and make considered improvements as their needs change."
+      }
+    ],
+    "tools": [
+      "Microsoft Foundry",
+      "Azure AI Search",
+      "Agentic AI",
+      "Retrieval-augmented generation",
+      "AI evaluation",
+      "Security and governance"
+    ],
+    "closing": "My aim is to make AI useful, understandable and responsible in a professional setting. This overview describes my areas of focus without sharing confidential projects, internal systems or case information.",
     "source": [
-      "owner-confirmed:2026-11-15"
+      "owner-confirmed:2026-11-15",
+      "owner-supplied:enterprise-ai-positioning"
     ]
   },
   {
@@ -74,31 +99,27 @@ export const work: WorkItem[] = [
     "start": 202510,
     "end": 202606,
     "location": "Rome, Italy",
-    "summary": "I built AI tools, dashboards and automated workflows for the Office of Inspections and Investigations.",
+    "summary": "I supported AI integration, data preparation and workflow improvement in a confidential oversight environment.",
     "overview": [
-      "My work at the World Food Programme brought together AI engineering, data preparation, reporting and automation. I worked within the Office of Inspections and Investigations, where handling sensitive information carefully was part of the job.",
-      "The tools needed to help people find information, prepare documents and follow operational work. I worked on systems that kept links to source material and included human review. Because the work is confidential, I describe the capabilities here without sharing case information."
+      "During my internship at the World Food Programme, I supported AI engineering and data-related work in the Office of Inspections and Investigations. The role combined technical implementation with testing, documentation and collaboration.",
+      "This public description focuses on my professional skills and approach. It excludes internal systems, operational details, record volumes and case information."
     ],
     "sections": [
       {
-        "title": "Finding information with AI",
-        "text": "I developed retrieval-augmented generation systems, often called RAG. These systems find relevant information in a collection before an AI model uses it to answer a question. I combined keyword, semantic and vector search with re-ranking and agent orchestration using Azure AI Search, Azure AI Foundry and GPT models."
+        "title": "Building useful AI tools",
+        "text": "I worked with language models and retrieval methods to help connect questions with relevant information. I paid attention to source references, clear outputs and human review."
       },
       {
-        "title": "Preparing the underlying data",
-        "text": "I built pipelines to ingest, validate, index and create embeddings for more than 9,000 oversight records. I also supported the preparation of more than one million forensic records and messages through parsing, normalisation, validation, secure storage and indexing. Keeping source links and metadata was important for tracing an answer back to the records behind it."
+        "title": "Preparing reliable information",
+        "text": "I supported data preparation, validation and integration work. This strengthened my understanding of how data quality affects the reliability of an AI application."
       },
       {
-        "title": "Helping with documents",
-        "text": "I built AI-assisted drafting and review workflows that accepted different document formats. They included citations, quality checks, structured exports and a human review step. The aim was to support the person reviewing the material while keeping the supporting information visible."
+        "title": "Improving everyday workflows",
+        "text": "I contributed to reporting and workflow improvements, with an emphasis on reducing repetitive work and making tools easier to use."
       },
       {
-        "title": "Making reporting easier",
-        "text": "I created 39 Power BI dashboards for executive, chief-level and operational users. They covered workload, key performance indicators, case ageing, intake and regional trends. I also automated SharePoint-connected reporting pipelines, reaching approximately 95% daily refresh automation and reducing manual reporting work."
-      },
-      {
-        "title": "Connecting requests and approvals",
-        "text": "Using Logic Apps, Power Automate and SharePoint Lists, I developed workflows for requests, approvals, notifications, status tracking and escalation. I also wrote technical documentation, governance materials, deployment notes and handover resources, and worked with international teams on planning, demos, feedback and testing."
+        "title": "Working with colleagues",
+        "text": "I collaborated with international teams, tested changes, gathered feedback and prepared documentation and handover materials. Careful handling of information was part of this work."
       }
     ],
     "tools": [
@@ -111,7 +132,7 @@ export const work: WorkItem[] = [
       "Logic Apps",
       "SharePoint"
     ],
-    "closing": "This role combined building the tools with preparing the data, documenting decisions and helping colleagues use and maintain the systems.",
+    "closing": "The internship gave me practical experience combining AI engineering, data work and responsible delivery in a professional environment.",
     "source": [
       "resume:1"
     ]
@@ -663,7 +684,9 @@ export const credentials = [
     "start": 202506,
     "source": [
       "resume:3"
-    ]
+    ],
+    "url": "https://learn.microsoft.com/en-us/users/venkatatarunkumarmavillapalli-760/credentials/e13460b8dc874ae2",
+    "certificateId": null
   },
   {
     "id": "azure-ai-fundamentals",
@@ -673,7 +696,9 @@ export const credentials = [
     "start": 202506,
     "source": [
       "resume:3"
-    ]
+    ],
+    "url": "https://learn.microsoft.com/en-us/users/venkatatarunkumarmavillapalli-760/credentials/ff0bad4ef880e9ef?ref=https%3A%2F%2Fwww.linkedin.com%2F",
+    "certificateId": null
   },
   {
     "id": "mckinsey-forward",
@@ -683,7 +708,9 @@ export const credentials = [
     "start": 202407,
     "source": [
       "resume:3"
-    ]
+    ],
+    "url": "https://www.credly.com/badges/193cebb3-bb1c-4b45-9488-2ac435e15390",
+    "certificateId": null
   },
   {
     "id": "ibm-machine-learning",
@@ -693,7 +720,9 @@ export const credentials = [
     "start": 202309,
     "source": [
       "resume:3"
-    ]
+    ],
+    "url": "https://www.coursera.org/account/accomplishments/professional-cert/DDTCETTDZ5F8",
+    "certificateId": null
   },
   {
     "id": "google-bi",
@@ -703,7 +732,9 @@ export const credentials = [
     "start": 202304,
     "source": [
       "resume:3"
-    ]
+    ],
+    "url": "https://coursera.org/verify/professional-cert/CTMS6LBYS4EW",
+    "certificateId": null
   },
   {
     "id": "risk-management",
@@ -713,7 +744,9 @@ export const credentials = [
     "start": 202001,
     "source": [
       "resume:3"
-    ]
+    ],
+    "url": null,
+    "certificateId": "AUBSI-RMS01-1925-0014"
   },
   {
     "id": "quality-management",
@@ -723,14 +756,16 @@ export const credentials = [
     "start": 201812,
     "source": [
       "resume:3"
-    ]
+    ],
+    "url": null,
+    "certificateId": "AUBSI-QMS01-1823-0012"
   }
 ];
 
 export type TimelineItem = {
   id: string; title: string; organisation: string; period: string; start: number;
   category: "Work" | "Education" | "Certifications" | "Conference";
-  summary: string; details: string[]; href: string; linkLabel: string;
+  summary: string; details: string[]; href: string; linkLabel: string; external?: boolean;
 };
 export const timeline: TimelineItem[] = [
   ...work.filter(item => item.kind === "Experience").map(item => ({
@@ -748,7 +783,7 @@ export const timeline: TimelineItem[] = [
     start: item.start, category: "Certifications" as const,
     summary: `${item.issuer} · ${item.date}`,
     details: [`I completed ${item.title} in ${item.date}.`],
-    href: "/learning/#certifications", linkLabel: "View certifications and programmes",
+    href: item.url ?? "/learning/#certifications", linkLabel: item.url ? "View credential" : "View certifications and programmes", external: Boolean(item.url),
   })),
   {
     id: "singapore-conference", title: "Technology in business intelligence", organisation: "National University of Singapore · Shaw Foundation",

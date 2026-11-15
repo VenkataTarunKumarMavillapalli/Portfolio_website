@@ -3,7 +3,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { Shell } from "@/components/ui/Shell";
 import { assetPath } from "@/lib/paths";
-import { profile } from "@/lib/content";
+import { profile, credentials } from "@/lib/content";
 import styles from "./page.module.css";
 
 export const metadata: Metadata = {
@@ -15,6 +15,7 @@ export const metadata: Metadata = {
 };
 
 export default function HomePage() {
+  const azureCredential = credentials.find(item => item.id === "azure-ai-engineer");
   return (
     <section className={`home ${styles.homepage}`} aria-labelledby="home-headline">
       <Shell>
@@ -41,7 +42,7 @@ export default function HomePage() {
                 <span>Investigative Technologies · Office of Inspector General · Jul 2026–present</span>
               </p>
               <ul>
-                <li>Microsoft Certified: Azure AI Engineer Associate</li>
+                <li>{azureCredential?.url ? <a href={azureCredential.url} target="_blank" rel="noopener noreferrer">Microsoft Certified: Azure AI Engineer Associate</a> : "Microsoft Certified: Azure AI Engineer Associate"}</li>
                 <li>MSc Data Science</li>
               </ul>
             </div>

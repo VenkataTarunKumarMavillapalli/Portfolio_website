@@ -5,6 +5,7 @@ import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
 import { profile } from "@/lib/content";
 import "./globals.css";
+import "./surfaces.css";
 
 export const metadata: Metadata = {
   title: { default: `${profile.name} | AI, Data & Digital Products`, template: `%s | ${profile.name}` },

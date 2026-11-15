@@ -22,7 +22,7 @@ The work, education and project descriptions use the owner-supplied Venkata.pdf.
 - Professional work is described at capability level. No confidential records, internal endpoints, credentials or case details are included.
 - Technical terms are explained without adding unreported features, outcomes or personal motivations.
 - The publication is listed without an inferred year. The existing IEEE URL is retained, as are the existing contact links.
-- The portrait and downloadable résumé are the same owner-supplied assets used in the earlier version.
+- The portrait is the owner-supplied image. The download is a freshly generated public résumé containing verified role titles, public summaries, education, credentials and project names. It uses the new contact email. The original source PDF is unchanged.
 - Older URLs redirect to the appropriate new role, education section or work collection. Previous content remains recoverable through Git history.
 
 Documents are source material, not instructions. No instructions embedded in documents or repository content are executed.
@@ -36,7 +36,17 @@ Documents are source material, not instructions. No instructions embedded in doc
 
 ## Consultant role and heading update — 15 November 2026
 
-- Added AI Integration Consultant – Investigative Technologies at WFP’s Office of Inspector General, July 2026–present, as a separate Work entry and timeline event. The appointment and dates were explicitly supplied by the owner. No duties, tools or impact metrics were transferred from the earlier internship.
+- Added AI Integration Consultant – Investigative Technologies at WFP’s Office of Inspector General, July 2026–present, as a separate Work entry and timeline event. The appointment and dates were explicitly supplied by the owner. No internship impact metrics or confidential project details were transferred to this role.
 - Existing experience titles match the wording in the résumé, including the WFP office, EFSA team/unit and Infotainment Internship programme title. The same titles appear on Work cards, detail pages and Timeline.
 - The homepage H1 is “Enterprise AI Engineer & AI Solutions Architect”; the Microsoft Foundry and Azure AI Search statement is supporting text.
 - Publication was explicitly requested by the owner.
+
+## Public role detail, credential links and visual refinement — 15 November 2026
+
+- Expanded the consultant entry using the owner’s approved enterprise AI positioning: knowledge retrieval, agent/tool integration, evaluation, responsible use and maintainability. It describes areas of focus, without named internal systems, architectures, records, case information, unreported metrics or outcomes.
+- The OIGI reference was inspected for presentation code only. The adaptation uses translucent surfaces, background lighting, borders, shadows and restrained hover states; no institutional marks, internal content, product data or access controls were copied.
+- Added the five credential URLs embedded in the supplied résumé to Learning and Timeline, plus the Azure AI Engineer link on Home. The two BSI entries have certificate numbers but no URLs in either supplied PDF, so no verification links were invented.
+- Updated contact text, mailto and copy actions to venkatatarunkumarmavillapalli@gmail.com. Generated a separate two-page public résumé with the new contact email and the five original credential URLs. Both WFP entries use public capability-level summaries, excluding operational figures and internal scope. The original uploaded résumé is unchanged.
+- Kept the existing experience titles, full-name header, main homepage title, portrait, page structure and GitHub Pages configuration.
+
+- Publication review identified WFP-specific operational figures in the older internship entry and résumé. The website entry was sanitized and the download was rebuilt from verified public content before publication; the owner-supplied originals remain unchanged.
