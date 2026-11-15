@@ -1,16 +1,14 @@
 "use client";
-
 import { useMemo, useState } from "react";
-import { projects } from "@/lib/content";
+import { work } from "@/lib/content";
 import { ProjectCard } from "./ui/ProjectCard";
-
 export function ProjectExplorer() {
-  const [query,setQuery]=useState("");
-  const [category,setCategory]=useState("All work");
-  const [kind,setKind]=useState("All contexts");
-  const categories=["All work","AI & automation","Data & analytics","Research & ML","Digital products"];
-  const kinds=["All contexts",...Array.from(new Set(projects.map(p=>p.kind)))];
-  const filtered=useMemo(()=>projects.filter(p=>(category==="All work"||p.category===category)&&(kind==="All contexts"||p.kind===kind)&&`${p.title} ${p.summary} ${p.context} ${p.technologies.join(" ")}`.toLowerCase().includes(query.trim().toLowerCase())),[query,category,kind]);
-  function reset(){setQuery("");setCategory("All work");setKind("All contexts");}
-  return <><div className="explorer-toolbar"><div className="search-field"><label htmlFor="project-search">Find something that interests you</label><input id="project-search" value={query} onChange={e=>setQuery(e.target.value)} type="search" placeholder="Search projects, topics, or technologies…" /></div><div className="select-field"><label htmlFor="project-kind">Context</label><select id="project-kind" value={kind} onChange={e=>setKind(e.target.value)}>{kinds.map(k=><option key={k}>{k}</option>)}</select></div></div><div className="filter-row" role="group" aria-label="Filter projects by area">{categories.map(c=><button type="button" key={c} className={category===c?"filter active":"filter"} aria-pressed={category===c} onClick={()=>setCategory(c)}>{c}</button>)}</div><div className="collection-status"><p role="status" aria-live="polite">{filtered.length} {filtered.length===1?"project":"projects"}{query?` matching “${query}”`:" to explore"}</p>{(query||category!=="All work"||kind!=="All contexts")&&<button onClick={reset} className="text-button">Clear filters ↺</button>}</div>{filtered.length?<div className="project-grid">{filtered.map(p=><ProjectCard key={p.slug} project={p} index={projects.indexOf(p)}/>)}</div>:<div className="empty-state"><h2>No projects found.</h2><p>Try a different topic or clear the filters to explore the full collection.</p><button onClick={reset} className="button primary">Show all projects</button></div>}</>;
+ const [kind,setKind]=useState<"Experience" | "Project">("Experience");
+ const [query,setQuery]=useState("");
+ const items=useMemo(()=>work.filter(item=>item.kind===kind && `${item.title} ${item.organisation} ${item.role} ${item.summary} ${item.tools.join(" ")}`.toLowerCase().includes(query.trim().toLowerCase())),[kind,query]);
+ function reset(){setQuery("");}
+ return <><div className="work-controls"><div className="segmented" role="group" aria-label="Choose work collection">{(["Experience","Project"] as const).map(value=><button key={value} type="button" aria-pressed={kind===value} onClick={()=>{setKind(value);setQuery("");}}>{value==="Experience"?"Experience":"Projects"}<span aria-hidden="true">{work.filter(item=>item.kind===value).length}</span></button>)}</div>
+ <div className="search-field"><label htmlFor="work-search">Search {kind==="Experience"?"experience":"projects"}</label><input id="work-search" type="search" value={query} onChange={event=>setQuery(event.target.value)} placeholder="A role, topic or tool"/></div></div>
+ <div className="collection-status"><p role="status" aria-live="polite">{items.length} {kind==="Experience"?(items.length===1?"role":"roles"):(items.length===1?"project":"projects")}{query.trim()?` matching “${query.trim()}”`:""}</p>{query&&<button className="text-button" onClick={reset}>Clear search</button>}</div>
+ {items.length?<div className="work-list">{items.map(item=><ProjectCard key={item.slug} item={item}/>)}</div>:<div className="empty-state"><h2>No matches here.</h2><p>Try another word or clear your search.</p><button className="button secondary" onClick={reset}>Clear search</button></div>}</>;
 }

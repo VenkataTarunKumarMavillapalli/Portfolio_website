@@ -1,222 +1,739 @@
+// Portfolio content. Biographical claims are drawn only from Venkata.pdf.
+export type WorkItem = {
+  slug: string; title: string; organisation: string; role: string;
+  kind: "Experience" | "Project"; period: string; start: number | null; end: number | null;
+  location: string; summary: string; overview: string[];
+  sections: { title: string; text: string }[]; tools: string[]; closing: string; source: string[];
+};
+
 export const profile = {
-  name: "Venkata Tarun Kumar Mavillapalli",
-  shortName: "Venkata Tarun",
-  role: "AI Engineer & Data Professional",
-  email: "mvtkop760@gmail.com",
-  github: "https://github.com/VenkataTarunKumarMavillapalli",
-  linkedin: "https://www.linkedin.com/in/venkata-tarun-kumar-mavillapalli-967b4613a/",
-  introduction: "I build AI, analytics, and digital products that turn complex information into practical tools. My experience spans the United Nations, a European Union agency, academic research, and enterprise technology.",
-  biography: "Originally from Hyderabad, India, my journey has taken me through international study in India, the United Kingdom, and the United States, and into data science, research, and technology work in Italy. I bring engineering, analytical thinking, and an interest in how people use technology to every project."
+  "name": "Venkata Tarun Kumar Mavillapalli",
+  "shortName": "Venkata Tarun",
+  "role": "AI Engineer & Data Professional",
+  "email": "mvtkop760@gmail.com",
+  "github": "https://github.com/VenkataTarunKumarMavillapalli",
+  "linkedin": "https://www.linkedin.com/in/venkata-tarun-kumar-mavillapalli-967b4613a/"
 };
 
 export const navigation = [
-  { label: "Home", href: "/" },
-  { label: "My journey", href: "/journey/" },
-  { label: "My work", href: "/work/" },
-  { label: "Learning", href: "/learning/" },
-  { label: "Beyond work", href: "/beyond/" },
-  { label: "Contact", href: "/contact/" }
-];
-
-export type Project = {
-  slug: string;
-  title: string;
-  category: "AI & automation" | "Data & analytics" | "Research & ML" | "Digital products";
-  context: string;
-  period: string;
-  role: string;
-  summary: string;
-  challenge: string;
-  contributions: string[];
-  outcome: string;
-  technologies: string[];
-  source: string[];
-  kind: "Professional work" | "Research" | "Independent project" | "Academic project" | "Programme project";
-  featured?: boolean;
-};
-
-export const projects: Project[] = [
   {
-    slug: "investigative-ai", title: "AI for investigative work", category: "AI & automation", context: "World Food Programme · United Nations", period: "2025–2026", role: "AI Engineer Intern · Integration & Investigative Technologies", kind: "Professional work", featured: true,
-    summary: "Azure-based retrieval, document assistance, and forensic discovery for sensitive oversight workflows.",
-    challenge: "Help teams navigate complex investigative information while keeping source traceability, governance, and human review central to the work.",
-    contributions: ["Designed and developed multi-agent retrieval-augmented generation systems using hybrid, semantic, and vector search.", "Built ingestion, validation, embedding, and indexing pipelines for more than 9,000 oversight records.", "Developed AI-assisted document drafting and review workflows with citations, quality checks, structured exports, and human review.", "Supported the preparation of more than one million forensic records and messages through parsing, normalisation, metadata tracking, and indexing.", "Produced technical documentation, deployment notes, and knowledge-transfer materials for maintainability and continuity."],
-    outcome: "Source-traceable retrieval and structured assistance for investigative and operational users. This account describes capabilities and contributions without exposing case material.",
-    technologies: ["Azure AI Foundry", "Azure AI Search", "Azure OpenAI", "Python", "RAG", "ETL"], source: ["resume:1"]
+    "label": "Home",
+    "href": "/"
   },
   {
-    slug: "oversight-analytics", title: "An operational view of oversight", category: "Data & analytics", context: "World Food Programme · United Nations", period: "2025–2026", role: "AI Engineer Intern", kind: "Professional work",
-    summary: "Executive and operational dashboards that make workload, case ageing, and regional trends easier to understand.",
-    challenge: "Bring fragmented reporting into a consistent view for executive, chief-level, and operational audiences.",
-    contributions: ["Created 39 Power BI dashboards covering KPIs, workloads, intake, case ageing, and regional trends.", "Automated SharePoint-connected reporting pipelines, with approximately 95% daily refresh automation reported in the résumé.", "Worked with international stakeholders through demos, feedback cycles, testing, and handovers."],
-    outcome: "More consistent reporting and earlier visibility into operational activity, with less repetitive manual preparation.", technologies: ["Power BI", "SharePoint", "Data modelling", "Reporting automation"], source: ["resume:1"]
+    "label": "About",
+    "href": "/about/"
   },
   {
-    slug: "request-workflow-automation", title: "From request to coordinated action", category: "AI & automation", context: "World Food Programme · United Nations", period: "2025–2026", role: "AI Engineer Intern", kind: "Professional work",
-    summary: "Structured request handling, approvals, notifications, and escalation across operational teams.",
-    challenge: "Reduce the coordination burden around requests while making status and responsibility easier to follow.",
-    contributions: ["Developed workflow automation using Azure Logic Apps, Power Automate, and SharePoint Lists.", "Connected request handling with approval steps, notifications, status tracking, and escalation logic.", "Documented systems and supported iterative testing and knowledge transfer."],
-    outcome: "A more structured path through operational handoffs and follow-up.", technologies: ["Power Automate", "Logic Apps", "SharePoint Lists"], source: ["resume:1"]
+    "label": "Work",
+    "href": "/work/"
   },
   {
-    slug: "data-quality-at-efsa", title: "Making data quality visible", category: "Data & analytics", context: "European Food Safety Authority", period: "2024–2025", role: "Data Officer Trainee · Integrated Data Unit", kind: "Professional work", featured: true,
-    summary: "Data quality dashboards and automated rules for a large CRM data environment.",
-    challenge: "Make discrepancies easier to detect and give three business units a shared view of data quality across six dimensions.",
-    contributions: ["Designed four Power BI data quality dashboards and more than 30 automated business rules.", "Worked with Terraform-based Databricks pipelines across more than 100,000 CRM records.", "Created Databricks branches and committed changes in Azure DevOps to support version control and deployment readiness.", "Authored user and developer documentation covering architecture, setup, data logic, and troubleshooting."],
-    outcome: "Repeatable monitoring and clearer ownership of data quality for FDP, ENREL, and KNOW business units.", technologies: ["Power BI", "Databricks", "Terraform", "Azure DevOps", "Python"], source: ["resume:1"]
+    "label": "Timeline",
+    "href": "/timeline/"
   },
   {
-    slug: "devops-date-updater", title: "A small tool for better delivery data", category: "AI & automation", context: "European Food Safety Authority", period: "2024–2025", role: "Data Officer Trainee", kind: "Professional work",
-    summary: "A Databricks application that automates Azure DevOps ticket date updates with an audit trail.",
-    challenge: "Keep Agile delivery records accurate without repeating manual updates every month.",
-    contributions: ["Built a secure Databricks app connected to the Azure DevOps API.", "Automated updates for more than 25 monthly Agile tickets.", "Retained audit trails and documented the workflow."], outcome: "The résumé reports more than five hours saved monthly through automated updates.", technologies: ["Databricks", "Azure DevOps API", "Python"], source: ["resume:1"]
+    "label": "Learning",
+    "href": "/learning/"
   },
   {
-    slug: "crm-reconciliation", title: "Trust across data systems", category: "Data & analytics", context: "European Food Safety Authority", period: "2024–2025", role: "Data Officer Trainee", kind: "Professional work",
-    summary: "Salesforce–Databricks reconciliation and modular data extraction workflows.",
-    challenge: "Check that records remain consistent, valid, and complete as they move between systems.",
-    contributions: ["Created a comparison pipeline to automate export and validation of more than 59,000 CRM records.", "Refactored five Python notebooks into modular Databricks components.", "Supported extractor reliability, feature improvements, and cross-functional quality assurance."], outcome: "A more repeatable approach to reconciliation, with reusable components and clearer maintenance paths.", technologies: ["Salesforce", "Databricks", "Python", "Data validation"], source: ["resume:1"]
-  },
-  {
-    slug: "data-analyst-agent", title: "An agent for analytical questions", category: "AI & automation", context: "Azure AI Foundry + Semantic Kernel", period: "Date not specified", role: "Solution implementation and customisation", kind: "Independent project", featured: true,
-    summary: "An AI assistant combining agent orchestration, data tools, session management, and secure cloud services.",
-    challenge: "Bring language models and analytical tools together in an assistant with managed sessions and observable infrastructure.",
-    contributions: ["Replicated and customised an agent-based solution accelerator using Semantic Kernel and Azure AI Foundry.", "Integrated OpenAI and Llama models with Azure Databricks plugins.", "Worked with session management, WebSocket connections, Content Safety, and Microsoft Entra ID.", "Enabled Code Interpreter and Bing Search tools, with Key Vault, API Management, Application Insights, and Cosmos DB."], outcome: "Hands-on experience connecting agent capabilities with the services needed to operate an enterprise-style assistant.", technologies: ["Semantic Kernel", "Azure AI Foundry", "Databricks", "Entra ID", "Cosmos DB"], source: ["resume:2"]
-  },
-  {
-    slug: "financial-reports-copilot", title: "A copilot for financial reports", category: "AI & automation", context: "Advanced RAG · Microsoft Azure", period: "Date not specified", role: "Solution implementation and customisation", kind: "Independent project",
-    summary: "A knowledge retrieval assistant built by adapting Microsoft's Advanced RAG solution accelerator.",
-    challenge: "Connect document ingestion, retrieval, and answer generation within a secure, configurable architecture.",
-    contributions: ["Customised a solution using Azure OpenAI, Azure Cognitive Search, and skills orchestration.", "Implemented session, query, and ingestion microservices using AKS, Redis, and Azure Functions.", "Integrated storage, secrets management, authentication, monitoring, and evaluation flows."], outcome: "A practical exploration of the full architecture around a retrieval assistant, from ingestion to operational visibility.", technologies: ["Azure OpenAI", "Azure AI Search", "AKS", "Redis", "Azure Functions"], source: ["resume:2"]
-  },
-  {
-    slug: "cryptocurrency-discourse", title: "Reading the networks within language", category: "Research & ML", context: "University of Naples Federico II", period: "May–Oct 2024", role: "Data Science Research Intern", kind: "Research", featured: true,
-    summary: "NLP and network analysis to explore discourse across 21 cryptocurrency white papers.",
-    challenge: "Understand topics, entities, relationships, and ideological dynamics in a technical body of text.",
-    contributions: ["Applied named entity recognition, topic modelling, sentiment analysis, and dependency parsing.", "Used semantic and social network analysis to explore communication structures and entity co-occurrence.", "Applied classification and clustering and collaborated on interpretation and research questions."], outcome: "An interdisciplinary research contribution connecting data science and computational social science; received a Certificate of Research Excellence and a PhD recommendation.", technologies: ["NLP", "NER", "LDA", "Network analysis", "Python"], source: ["resume:1"]
-  },
-  {
-    slug: "eeg-model-uncertainty", title: "Looking beyond a model's prediction", category: "Research & ML", context: "University of Naples Federico II · Italdesign", period: "2024", role: "Curricular internship and thesis work", kind: "Research",
-    summary: "A metrological approach to uncertainty evaluation in model performance, using EEG signal classification.",
-    challenge: "Study how uncertainty can be considered when evaluating classification performance.",
-    contributions: ["Undertook thesis work under Prof. Leopoldo Angrisani on uncertainty evaluation in model performance.", "Used EEG signal classification as the case-study context.", "Completed more than 400 hours of theoretical and practical in-vehicle infotainment training through the Ideneers Academy."], outcome: "Connected measurement thinking, machine learning, and automotive technology training.", technologies: ["Model evaluation", "EEG classification", "Metrology", "IVI systems"], source: ["resume:2"]
-  },
-  {
-    slug: "news-classification", title: "Exploring the signals in news", category: "Research & ML", context: "University of Naples Federico II", period: "Master’s programme", role: "Data mining project contributor", kind: "Academic project",
-    summary: "A text-analysis and classification project comparing traditional machine learning and deep learning approaches.",
-    challenge: "Explore how language representations and model choice affect classification of labelled real and fake news datasets.",
-    contributions: ["Performed readability, co-occurrence, sentiment, named entity, and topic analysis.", "Compared TF-IDF and Word2Vec representations across conventional and neural models.", "Experimented with recurrent architectures and fine-tuned BERT.", "Presented an interactive Streamlit application with text analysis, predictions, and confidence visualisation."], outcome: "An end-to-end academic workflow from text preparation and model comparison to an interactive interface. Dataset classification does not establish the truth of an arbitrary news article.", technologies: ["Python", "TF-IDF", "BERT", "NLP", "Streamlit"], source: ["resume:2", "github:indivProject.html"]
-  },
-  {
-    slug: "course-recommender", title: "Helping learners find their next course", category: "Research & ML", context: "IBM Machine Learning Capstone", period: "2023", role: "Capstone project developer", kind: "Academic project",
-    summary: "Content-based and collaborative-filtering approaches to course recommendations.",
-    challenge: "Help learners discover relevant courses using course text and enrolment patterns.",
-    contributions: ["Explored course enrolment data and extracted bag-of-words features from course content.", "Built similarity, clustering, and dimensionality-reduction approaches.", "Compared collaborative filtering methods including KNN, matrix factorisation, and neural networks.", "Communicated the results through a project presentation."], outcome: "Practical experience comparing recommendation strategies and explaining the results.", technologies: ["Python", "Scikit-learn", "Keras", "PCA", "NMF"], source: ["resume:2", "github:indivProject.html"]
-  },
-  {
-    slug: "colony-weight-forecasting", title: "Finding patterns over time", category: "Research & ML", context: "University of Naples Federico II", period: "Master’s programme", role: "Time-series project contributor", kind: "Academic project",
-    summary: "Forecasting insect colony weight and exploring environmental relationships in Power BI.",
-    challenge: "Use historical colony and environmental observations to model weight changes and make the data understandable.",
-    contributions: ["Explored activity, temperature, humidity, light, sound, and weight variables.", "Engineered features and compared ARIMA, SARIMA, regression, and tree-based approaches.", "Evaluated models using MSE, RMSE, and MAPE.", "Built an interactive Power BI dashboard for historical patterns and relationships."], outcome: "Combined forecasting and visual exploration in one analytical project.", technologies: ["Python", "ARIMA", "SARIMA", "Power BI"], source: ["resume:2", "github:indivProject.html"]
-  },
-  {
-    slug: "google-fiber-bi", title: "Understanding repeat customer calls", category: "Data & analytics", context: "Google Business Intelligence Capstone", period: "2023", role: "BI capstone developer", kind: "Academic project",
-    summary: "A dashboard and requirements-led analysis of repeat calls in the Google Fiber scenario.",
-    challenge: "Help stakeholders explore call frequency by market, problem type, and time period.",
-    contributions: ["Prepared stakeholder requirements, project requirements, and planning documents.", "Used BigQuery and SQL to prepare target tables.", "Designed Tableau dashboards and presented findings for the supplied scenario.", "Also completed the programme's Cyclist scenario."], outcome: "Practised the complete BI process, from stakeholder questions to a dashboard and presentation.", technologies: ["BigQuery", "SQL", "Tableau", "Google Sheets"], source: ["resume:2", "github:indivProject.html"]
-  },
-  {
-    slug: "apple-product-development", title: "From a human need to an app", category: "Digital products", context: "Apple Developer Academy", period: "Sep 2023–Jun 2024", role: "Academy participant · Digital Product Development", kind: "Programme project", featured: true,
-    summary: "Multidisciplinary, challenge-based app development with design, business, and engineering perspectives.",
-    challenge: "Translate everyday needs into useful app concepts while learning to work across disciplines and cultures.",
-    contributions: ["Collaborated in international teams through research, ideation, prototyping, and iOS development.", "Applied Challenge-Based Learning, accessibility, branding, and user-centred design.", "Worked on idea validation, business models, value propositions, and product lifecycle decisions.", "Used Swift, Figma, Miro, and TestFlight throughout development and feedback cycles."], outcome: "A broader approach to building products that connects technical implementation with the people and needs behind it.", technologies: ["Swift", "Figma", "Miro", "TestFlight", "Challenge-Based Learning"], source: ["resume:3", "github:experience.html"]
-  },
-  {
-    slug: "salesforce-and-chatbots", title: "Connected customer experiences", category: "Digital products", context: "NeuraFlash · Hyderabad", period: "Feb 2021–Aug 2022", role: "Associate Salesforce Developer", kind: "Professional work",
-    summary: "Salesforce configuration, Amazon Connect chatbot development, and production support.",
-    challenge: "Support customer-service workflows through reliable configurations, automated interactions, and ongoing operational support.",
-    contributions: ["Configured Salesforce flows, layouts, sharing settings, permissions, reports, and dashboards.", "Developed and configured Amazon Connect chatbots and flows.", "Investigated and resolved production issues.", "Worked with GitHub, Jira, Confluence, Lucidchart, and OpsGenie."], outcome: "Hands-on enterprise delivery experience spanning implementation, collaboration, and support.", technologies: ["Salesforce", "Amazon Connect", "GitHub", "Jira"], source: ["resume:2", "github:experience.html"]
-  },
-  {
-    slug: "drexel-web-development", title: "A clearer digital experience", category: "Digital products", context: "A.J. Drexel Autism Institute · Philadelphia", period: "May–Jul 2019", role: "Website & Database Development Intern", kind: "Professional work",
-    summary: "A mobile-first website redesign and database development in an international student collaboration.",
-    challenge: "Improve the website experience while coordinating work across technical and business contributors.",
-    contributions: ["Redesigned the website with mobile-first layouts and new user-experience components.", "Led a computer-science student team working with Drexel business students.", "Supervised database creation, delegated tasks, and applied Scrum."], outcome: "The résumé reports twice the performance of the legacy website, alongside improved mobile usability.", technologies: ["Web development", "Database design", "Scrum", "UX"], source: ["resume:2", "github:experience.html"]
-  },
-  {
-    slug: "sauce-and-spoon", title: "Planning a project from start to finish", category: "Digital products", context: "Google Project Management Capstone", period: "2023", role: "Capstone participant", kind: "Academic project",
-    summary: "Scope, stakeholder alignment, planning, and evaluation for the Sauce & Spoon scenario.",
-    challenge: "Turn a supplied business scenario into an organised project with clear goals and responsibilities.",
-    contributions: ["Prepared a project charter, SMART goals, tasks, milestones, and a project plan.", "Practised stakeholder negotiation, time estimation, quality planning, and escalation.", "Developed evaluation questions and approaches to retrospectives and reporting."], outcome: "Practical experience in the documents and conversations that keep a project moving.", technologies: ["Project planning", "Stakeholder management", "Agile", "Quality management"], source: ["github:indivProject.html"]
-  },
-  {
-    slug: "bellabeat-analysis", title: "From wearable data to business questions", category: "Data & analytics", context: "Google Data Analytics Capstone", period: "2023", role: "Data analytics capstone participant", kind: "Academic project",
-    summary: "Exploration of Fitbit activity data for a Bellabeat marketing scenario.",
-    challenge: "Understand usage patterns in a supplied dataset and consider their relevance to a wellness-product business.",
-    contributions: ["Cleaned, transformed, visualised, and analysed activity data in Python.", "Identified patterns and connected them with the scenario's business questions.", "Developed marketing recommendations and communicated the analytical findings."], outcome: "An exercise in translating data analysis into business recommendations, rather than a deployed client engagement.", technologies: ["Python", "Data cleaning", "Visualisation", "Business analysis"], source: ["github:indivProject.html"]
-  },
-  {
-    slug: "human-activity-recognition", title: "Understanding movement through data", category: "Research & ML", context: "University of Naples Federico II", period: "Master’s programme", role: "Statistical analysis project contributor", kind: "Academic project",
-    summary: "Exploring smartphone sensor data for human activity recognition.",
-    challenge: "Investigate how accelerometer and gyroscope measurements can support activity classification.",
-    contributions: ["Prepared the data and used descriptive statistics and visual exploration.", "Applied clustering, correlation analysis, dimensionality reduction, and Lasso feature selection.", "Compared SVM, logistic regression, decision trees, and random forests using cross-validation and classification metrics."], outcome: "A statistical and machine-learning study with potential applications in activity monitoring.", technologies: ["Statistical analysis", "SVM", "Random forest", "Cross-validation"], source: ["github:indivProject.html"]
-  },
-  {
-    slug: "california-housing", title: "Modelling housing prices", category: "Research & ML", context: "California census dataset", period: "Date not specified", role: "Machine-learning project developer", kind: "Academic project",
-    summary: "A regression workflow for estimating median housing prices from census features.",
-    challenge: "Explore how population, income, and other census characteristics relate to median housing prices.",
-    contributions: ["Performed exploration, preprocessing, data preparation, and model training.", "Compared models using root mean squared error.", "Tuned a random forest using grid search."], outcome: "Experience with the full regression workflow and systematic model selection.", technologies: ["Python", "Random forest", "Regression", "Grid search"], source: ["github:indivProject.html"]
-  },
-  {
-    slug: "parallel-data-imputation", title: "Exploring parallel data processing", category: "Research & ML", context: "University of Naples Federico II", period: "Master’s programme", role: "Group project contributor", kind: "Academic project",
-    summary: "Mean imputation on the Titanic dataset using OpenMP and university computing infrastructure.",
-    challenge: "Study the relationship between thread count and execution time in a parallel data-processing task.",
-    contributions: ["Implemented mean imputation using OpenMP.", "Used university cluster infrastructure and explored MPI/Open MPI tooling.", "Compared execution time across thread counts and presented the results."], outcome: "A practical introduction to parallel computing and performance measurement.", technologies: ["OpenMP", "MPI", "Parallel computing"], source: ["github:indivProject.html"]
+    "label": "Contact",
+    "href": "/contact/"
   }
 ];
 
-export type TimelineItem = { id: string; year: number; period: string; category: "Experience" | "Education" | "Milestone"; title: string; organisation: string; location: string; summary: string; details: string[]; source: string[] };
-export const timeline: TimelineItem[] = [
-  {id:"wfp",year:2025,period:"Oct 2025 – Jun 2026",category:"Experience",title:"AI Engineer Intern",organisation:"World Food Programme · United Nations",location:"Rome, Italy",summary:"Integration and investigative technologies in a sensitive oversight environment.",details:["Azure-based AI, RAG, forensic data pipelines, and document assistance.","Executive analytics, workflow automation, and technical knowledge transfer."],source:["resume:1"]},
-  {id:"efsa",year:2024,period:"Nov 2024 – Oct 2025",category:"Experience",title:"Data Officer Trainee",organisation:"European Food Safety Authority",location:"Parma, Italy",summary:"Data management, quality, and analytics in the Integrated Data Unit.",details:["Power BI dashboards, Databricks pipelines, CRM reconciliation, and Azure DevOps automation.","Founding member of a trainee-powered Scrum team exploring internal learning and collaboration opportunities."],source:["resume:1"]},
-  {id:"research",year:2024,period:"May – Oct 2024",category:"Experience",title:"Data Science Research Intern",organisation:"University of Naples Federico II",location:"Naples, Italy",summary:"NLP and network analysis at the intersection of data science and computational social science.",details:["Analysed 21 cryptocurrency white papers.","Received a Certificate of Research Excellence and recommendation for PhD programmes."],source:["resume:1"]},
-  {id:"italdesign",year:2024,period:"May – Aug 2024",category:"Experience",title:"Infotainment Internship",organisation:"Italdesign Giugiaro · Ideneers Academy",location:"Italy",summary:"Over 400 hours of theoretical and practical training in in-vehicle infotainment.",details:["Thesis work on a metrological approach to uncertainty evaluation in EEG model performance.","Ranked first in the programme, as reported in the résumé."],source:["resume:2"]},
-  {id:"apple",year:2023,period:"Sep 2023 – Jun 2024",category:"Education",title:"Digital Product Development & Management",organisation:"Apple Developer Academy",location:"Naples, Italy",summary:"Challenge-based learning through international, multidisciplinary app development.",details:["Research, accessibility, prototyping, iOS development, and product strategy.","Worked with Swift, Figma, Miro, and TestFlight."],source:["resume:3"]},
-  {id:"masters",year:2022,period:"Sep 2022 – May 2025",category:"Education",title:"MSc in Data Science",organisation:"University of Naples Federico II",location:"Naples, Italy",summary:"Data science for public administration, economics, and management.",details:["Coursework in data mining, big data architecture, statistics, text mining, ethics, and business intelligence.","Reported result: 88%. Built AI agents and RAG systems as side projects."],source:["resume:3"]},
-  {id:"neuraflash",year:2021,period:"Feb 2021 – Aug 2022",category:"Experience",title:"Associate Salesforce Developer",organisation:"NeuraFlash",location:"Hyderabad, India",summary:"Enterprise configurations, Amazon Connect chatbots, and production support.",details:["Salesforce flows, permissions, reports, and dashboards.","Cross-functional delivery using GitHub, Jira, Confluence, and OpsGenie."],source:["resume:2"]},
-  {id:"drexel",year:2019,period:"May – Jul 2019",category:"Experience",title:"Website & Database Development Intern",organisation:"A.J. Drexel Autism Institute",location:"Philadelphia, USA",summary:"Mobile-first website redesign and database development in an international collaboration.",details:["Coordinated a student computer-science team and business contributors.","Used Scrum to organise delivery and task ownership."],source:["resume:2"]},
-  {id:"adelphi",year:2019,period:"2019",category:"Education",title:"Learning across continents",organisation:"Adelphi University",location:"New York, USA",summary:"Study within the three-continental undergraduate programme.",details:["Courses included machine learning, computer networking, and algorithm design."],source:["timeline:1"]},
-  {id:"birkbeck",year:2018,period:"2018",category:"Education",title:"An international academic perspective",organisation:"Birkbeck, University of London",location:"London, UK",summary:"Study within the three-continental undergraduate programme.",details:["Business administration, advanced Java, mobile computing, and telecommunications."],source:["timeline:1"]},
-  {id:"publication",year:2018,period:"December 2018",category:"Milestone",title:"The Machine Predicted Market",organisation:"CTEMS · IEEE Xplore",location:"Research publication",summary:"A review of algorithmic trading, its models, failure risks, and future direction.",details:["Published in the International Conference on Computational Techniques, Electronics and Mechanical Systems."],source:["resume:3","github:achievements.html"]},
-  {id:"nus",year:2017,period:"2017",category:"Milestone",title:"Technology and business intelligence",organisation:"National University of Singapore · Shaw Foundation",location:"Singapore",summary:"Participated in an international conference on the role of technology in business intelligence.",details:[],source:["resume:3","timeline:1"]},
-  {id:"bachelors",year:2016,period:"Aug 2016 – Jul 2020",category:"Education",title:"BTech in Computer Science Engineering",organisation:"Amity University · Three-Continental Programme",location:"India · United Kingdom · United States",summary:"An undergraduate foundation in computing, supported by international study.",details:["Study at Amity University, Birkbeck, and Adelphi University.","Coursework spanning programming, databases, networks, machine learning, cloud computing, and software engineering."],source:["resume:3"]}
+export const work: WorkItem[] = [
+  {
+    "slug": "world-food-programme",
+    "title": "AI, reporting and automation at WFP",
+    "organisation": "World Food Programme · United Nations",
+    "role": "AI Engineer Intern — Integration & Investigative Technologies",
+    "kind": "Experience",
+    "period": "Oct 2025 – Jun 2026",
+    "start": 202510,
+    "end": 202606,
+    "location": "Rome, Italy",
+    "summary": "I built AI tools, dashboards and automated workflows for the Office of Inspections and Investigations.",
+    "overview": [
+      "My work at the World Food Programme brought together AI engineering, data preparation, reporting and automation. I worked within the Office of Inspections and Investigations, where handling sensitive information carefully was part of the job.",
+      "The tools needed to help people find information, prepare documents and follow operational work. I worked on systems that kept links to source material and included human review. Because the work is confidential, I describe the capabilities here without sharing case information."
+    ],
+    "sections": [
+      {
+        "title": "Finding information with AI",
+        "text": "I developed retrieval-augmented generation systems, often called RAG. These systems find relevant information in a collection before an AI model uses it to answer a question. I combined keyword, semantic and vector search with re-ranking and agent orchestration using Azure AI Search, Azure AI Foundry and GPT models."
+      },
+      {
+        "title": "Preparing the underlying data",
+        "text": "I built pipelines to ingest, validate, index and create embeddings for more than 9,000 oversight records. I also supported the preparation of more than one million forensic records and messages through parsing, normalisation, validation, secure storage and indexing. Keeping source links and metadata was important for tracing an answer back to the records behind it."
+      },
+      {
+        "title": "Helping with documents",
+        "text": "I built AI-assisted drafting and review workflows that accepted different document formats. They included citations, quality checks, structured exports and a human review step. The aim was to support the person reviewing the material while keeping the supporting information visible."
+      },
+      {
+        "title": "Making reporting easier",
+        "text": "I created 39 Power BI dashboards for executive, chief-level and operational users. They covered workload, key performance indicators, case ageing, intake and regional trends. I also automated SharePoint-connected reporting pipelines, reaching approximately 95% daily refresh automation and reducing manual reporting work."
+      },
+      {
+        "title": "Connecting requests and approvals",
+        "text": "Using Logic Apps, Power Automate and SharePoint Lists, I developed workflows for requests, approvals, notifications, status tracking and escalation. I also wrote technical documentation, governance materials, deployment notes and handover resources, and worked with international teams on planning, demos, feedback and testing."
+      }
+    ],
+    "tools": [
+      "Azure AI Foundry",
+      "Azure AI Search",
+      "Azure OpenAI",
+      "Python",
+      "Power BI",
+      "Power Automate",
+      "Logic Apps",
+      "SharePoint"
+    ],
+    "closing": "This role combined building the tools with preparing the data, documenting decisions and helping colleagues use and maintain the systems.",
+    "source": [
+      "resume:1"
+    ]
+  },
+  {
+    "slug": "efsa",
+    "title": "Data quality and internal tools at EFSA",
+    "organisation": "European Food Safety Authority",
+    "role": "Data Officer Trainee — Data Management and Analysis Team",
+    "kind": "Experience",
+    "period": "Nov 2024 – Oct 2025",
+    "start": 202411,
+    "end": 202510,
+    "location": "Parma, Italy",
+    "summary": "I worked on data quality dashboards, CRM checks, Databricks applications and documentation for data products.",
+    "overview": [
+      "At EFSA, I worked in the Integrated Data Unit on data management and product support. Much of my work focused on checking that information was consistent across systems and making those checks easier for other teams to use.",
+      "I worked with analysts, engineers, product managers, domain specialists and scientists. Alongside implementation, I wrote documentation so that people could understand how the products worked and continue using them."
+    ],
+    "sections": [
+      {
+        "title": "Checking data quality",
+        "text": "I designed four Power BI dashboards with more than 30 automated business rules and Terraform-based Databricks pipelines. The work covered more than 100,000 CRM records, six dimensions of data quality and three business units: FDP, ENREL and KNOW. The dashboards made discrepancies visible and supported ongoing monitoring."
+      },
+      {
+        "title": "Reducing repetitive ticket updates",
+        "text": "I built the Azure DevOps Closed Date Updater, a secure Databricks application connected to the Azure DevOps API. It automated updates for more than 25 Agile tickets each month, kept a complete audit trail and saved more than five hours of monthly manual work."
+      },
+      {
+        "title": "Comparing information across systems",
+        "text": "I created a Salesforce–Databricks comparison pipeline that automated the export and validation of more than 59,000 CRM records. I also refactored five Python notebooks into modular Databricks components, improving the reliability and maintainability of the Nos extractor."
+      },
+      {
+        "title": "Making the work maintainable",
+        "text": "I used Databricks branches and Azure DevOps commits to prepare changes for controlled deployment. I wrote user and developer documentation for three EFSA data products, covering architecture, setup, data logic and troubleshooting, and supported ad hoc CRM analyses."
+      },
+      {
+        "title": "Building with other trainees",
+        "text": "I was a founding member of the trainee-powered scrum team under HUCAP. We worked on an internal platform for sharing ad hoc learning and collaboration opportunities across EFSA units. This brought product design and cross-team collaboration into my data-focused role."
+      }
+    ],
+    "tools": [
+      "Power BI",
+      "Databricks",
+      "Python",
+      "Terraform",
+      "Azure DevOps",
+      "Salesforce"
+    ],
+    "closing": "The work made data checks more repeatable, reduced routine updates and gave colleagues clearer information about how the data products operated.",
+    "source": [
+      "resume:1"
+    ]
+  },
+  {
+    "slug": "cryptocurrency-discourse",
+    "title": "Research into cryptocurrency white papers",
+    "organisation": "University of Naples Federico II",
+    "role": "Data Science Research Intern",
+    "kind": "Experience",
+    "period": "May 2024 – Oct 2024",
+    "start": 202405,
+    "end": 202410,
+    "location": "Naples, Italy",
+    "summary": "I used language analysis and network methods to study topics, entities and relationships across 21 white papers.",
+    "overview": [
+      "During this research internship, I studied cryptocurrency white papers using natural language processing and network analysis. The work looked at how ideas, entities and relationships appeared across a collection of 21 documents.",
+      "The research combined data science with computational social science. I helped refine research questions, interpret results and place the findings in a wider social and technical context."
+    ],
+    "sections": [
+      {
+        "title": "Reading patterns across documents",
+        "text": "I used named entity recognition to identify entities, topic modelling with Latent Dirichlet Allocation to explore themes, and dependency parsing to examine language structure. Sentiment analysis and semantic network analysis provided other ways to look at the same material."
+      },
+      {
+        "title": "Exploring connections",
+        "text": "I used entity co-occurrence analysis to examine which entities appeared together. I also applied social network analysis, text classification and clustering to study groups and communication structures in the documents."
+      },
+      {
+        "title": "Interpreting the findings",
+        "text": "I worked with the research team to extract and bring together topics, entities and relationships. The analysis was part of an iterative research process: refining the questions, examining the results and considering what those results could reasonably tell us."
+      }
+    ],
+    "tools": [
+      "Natural language processing",
+      "Named entity recognition",
+      "Topic modelling",
+      "Network analysis",
+      "Text classification",
+      "Clustering"
+    ],
+    "closing": "I received a Certificate of Research Excellence and a recommendation for PhD programmes following this work.",
+    "source": [
+      "resume:1"
+    ]
+  },
+  {
+    "slug": "eeg-model-uncertainty",
+    "title": "Infotainment training and model evaluation",
+    "organisation": "Italdesign Giugiaro · Ideneers Academy",
+    "role": "Infotainment Intern",
+    "kind": "Experience",
+    "period": "May 2024 – Aug 2024",
+    "start": 202405,
+    "end": 202408,
+    "location": "",
+    "summary": "I completed practical training in in-vehicle infotainment and worked on uncertainty in EEG classification models.",
+    "overview": [
+      "At the Ideneers Academy, I completed more than 400 hours of theoretical and practical training in in-vehicle infotainment systems. I ranked first in the programme.",
+      "My curricular internship also included thesis work under Professor Leopoldo Angrisani: “A Metrological Approach to Uncertainty Evaluation in Model Performance: A Case Study on EEG Signals Classification.”"
+    ],
+    "sections": [
+      {
+        "title": "Training in infotainment systems",
+        "text": "The programme covered in-vehicle infotainment through both theory and practice. This gave me experience with a different application of technology alongside my data science studies."
+      },
+      {
+        "title": "Looking at uncertainty in model performance",
+        "text": "The thesis considered how uncertainty can be evaluated when assessing a classification model. EEG signal classification was the case study. The focus was on understanding model performance through a metrological approach, rather than treating a performance score as a complete picture."
+      }
+    ],
+    "tools": [
+      "In-vehicle infotainment",
+      "Model evaluation",
+      "Uncertainty evaluation",
+      "EEG classification"
+    ],
+    "closing": "This experience connected practical technical training with my research into how machine learning models are evaluated.",
+    "source": [
+      "resume:2"
+    ]
+  },
+  {
+    "slug": "salesforce-and-chatbots",
+    "title": "Salesforce development and customer-service tools",
+    "organisation": "NeuraFlash",
+    "role": "Associate Salesforce Developer",
+    "kind": "Experience",
+    "period": "Feb 2021 – Aug 2022",
+    "start": 202102,
+    "end": 202208,
+    "location": "Hyderabad, India",
+    "summary": "I configured Salesforce, developed Amazon Connect chatbots and supported systems in production.",
+    "overview": [
+      "At NeuraFlash, I worked on Salesforce configurations and customer-service tools. The role included implementing changes, collaborating with other teams and resolving issues after systems were in use."
+    ],
+    "sections": [
+      {
+        "title": "Configuring Salesforce",
+        "text": "I designed and implemented page layouts, sharing settings and dashboards. These changes shaped how users accessed information and worked within Salesforce."
+      },
+      {
+        "title": "Working on automated customer service",
+        "text": "I developed and configured Amazon Connect chatbots to support automated customer-service interactions. This work sat alongside the Salesforce development and configuration tasks in my role."
+      },
+      {
+        "title": "Supporting live systems",
+        "text": "I investigated and resolved production issues. I used Lucid Charts for process diagrams, GitHub for version control, Jira for project tracking, OpsGenie for incident management and Confluence for documentation and knowledge sharing."
+      }
+    ],
+    "tools": [
+      "Salesforce",
+      "Amazon Connect",
+      "GitHub",
+      "Jira",
+      "OpsGenie",
+      "Confluence",
+      "Lucid Charts"
+    ],
+    "closing": "The role gave me experience across development, team coordination and the ongoing support that software needs after release.",
+    "source": [
+      "resume:2"
+    ]
+  },
+  {
+    "slug": "drexel-web-development",
+    "title": "Website and database development",
+    "organisation": "A.J. Drexel Autism Institute",
+    "role": "Website & Database Development Intern",
+    "kind": "Experience",
+    "period": "May 2019 – Jul 2019",
+    "start": 201905,
+    "end": 201907,
+    "location": "Philadelphia, USA",
+    "summary": "I redesigned a website for mobile use and led a team working on the website and its database.",
+    "overview": [
+      "During my internship at the A.J. Drexel Autism Institute, I worked on redesigning and developing a mobile-first website. The work included changes to the user interface as well as database development."
+    ],
+    "sections": [
+      {
+        "title": "Improving the website",
+        "text": "I redesigned the site around mobile use and improved its user-interface components. The redesigned website achieved twice the performance speed of the earlier version."
+      },
+      {
+        "title": "Coordinating the work",
+        "text": "I led a cross-functional team using Scrum. I oversaw database creation and delegated tasks, combining hands-on development with responsibility for organising the team’s work."
+      }
+    ],
+    "tools": [
+      "Web development",
+      "Database development",
+      "Mobile-first design",
+      "Scrum"
+    ],
+    "closing": "This internship brought together website development, database work and practical experience leading a team.",
+    "source": [
+      "resume:2"
+    ]
+  },
+  {
+    "slug": "data-analyst-agent",
+    "title": "Data Analyst Agent",
+    "organisation": "Azure AI Foundry + Semantic Kernel",
+    "role": "Independent implementation based on a solution accelerator",
+    "kind": "Project",
+    "period": "Date not specified",
+    "start": null,
+    "end": null,
+    "location": "",
+    "summary": "I adapted an agent-based solution accelerator into an assistant with access to data tools and search.",
+    "overview": [
+      "I replicated and customised an agent-based solution accelerator using Azure AI Foundry and Semantic Kernel. The work involved building an AI assistant and connecting it to the tools and services needed to handle analytical questions.",
+      "This was an adaptation of an existing accelerator. My work focused on customising the implementation and integrating the supporting services."
+    ],
+    "sections": [
+      {
+        "title": "Connecting models and data tools",
+        "text": "I used the Semantic Kernel Agent Framework with Azure AI Foundry, OpenAI and Llama models, and Azure Databricks plugins. Code Interpreter and Bing Search through Foundry Agent Tools supported grounding and reasoning during a session."
+      },
+      {
+        "title": "Managing user sessions",
+        "text": "I worked with a Session Manager and WebSocket connections, and integrated Microsoft Entra ID for identity and Azure AI Content Safety for content checks."
+      },
+      {
+        "title": "Supporting the application",
+        "text": "Azure Key Vault, API Management, Application Insights and Cosmos DB supported secrets management, service access, monitoring and application state. These services formed the infrastructure around the assistant."
+      }
+    ],
+    "tools": [
+      "Semantic Kernel",
+      "Azure AI Foundry",
+      "Databricks",
+      "Cosmos DB",
+      "Microsoft Entra ID",
+      "Key Vault",
+      "API Management",
+      "Application Insights"
+    ],
+    "closing": "The result was a customised agent-based assistant with data connections, session handling and supporting Azure infrastructure.",
+    "source": [
+      "resume:2"
+    ]
+  },
+  {
+    "slug": "financial-reports-copilot",
+    "title": "Copilot for Financial Reports",
+    "organisation": "Microsoft Azure AI services",
+    "role": "Independent implementation based on Microsoft’s Advanced RAG accelerator",
+    "kind": "Project",
+    "period": "Date not specified",
+    "start": null,
+    "end": null,
+    "location": "",
+    "summary": "I adapted a retrieval-based AI assistant for finding and using information in financial reports.",
+    "overview": [
+      "I replicated and customised Microsoft’s Advanced RAG solution accelerator. RAG means retrieval-augmented generation: the application finds relevant information from documents and gives that information to a model to help it answer a question.",
+      "The implementation used Azure OpenAI and Azure Cognitive Search, with supporting services for document ingestion, sessions, authentication and monitoring."
+    ],
+    "sections": [
+      {
+        "title": "Retrieving information from documents",
+        "text": "I worked with GPT-4, Azure Cognitive Search and custom skills orchestration to build the knowledge retrieval assistant. The system combined document search with an AI-generated response."
+      },
+      {
+        "title": "Organising the application services",
+        "text": "I implemented microservices for session management, query orchestration and document ingestion using AKS, Redis Cache and Azure Functions. Cosmos DB and Azure Storage supported persistent state and storage, while Key Vault handled secrets."
+      },
+      {
+        "title": "Configuring and monitoring the system",
+        "text": "I integrated Microsoft Entra ID, API Management, Azure Monitor, Application Insights and Log Analytics. I also used a Configuration Service for runtime settings and automated evaluation through nightly test runs and logging flows."
+      }
+    ],
+    "tools": [
+      "Azure OpenAI",
+      "Azure Cognitive Search",
+      "AKS",
+      "Azure Functions",
+      "Redis",
+      "Cosmos DB",
+      "Key Vault",
+      "Azure Monitor"
+    ],
+    "closing": "The project brought together document retrieval, application services and operational tooling in a customised version of the Microsoft accelerator.",
+    "source": [
+      "resume:2"
+    ]
+  },
+  {
+    "slug": "course-recommender",
+    "title": "A course recommendation system",
+    "organisation": "Machine Learning Capstone",
+    "role": "Capstone project",
+    "kind": "Project",
+    "period": "Date not specified",
+    "start": null,
+    "end": null,
+    "location": "",
+    "summary": "I explored different ways to recommend online courses from course content and enrolment data.",
+    "overview": [
+      "This project looked at how a recommendation system could help learners find courses that interest them. I worked with online-course enrolment data and course descriptions, and compared content-based and collaborative-filtering approaches."
+    ],
+    "sections": [
+      {
+        "title": "Understanding the data",
+        "text": "I collected and explored the course enrolment data. I also represented course text using Bag of Words, which describes text through word occurrences, and used those representations to calculate similarities between courses."
+      },
+      {
+        "title": "Recommending from course content",
+        "text": "I built content-based recommendation approaches using similarity measures, K-means clustering and principal component analysis. These approaches use the characteristics of courses to find related options."
+      },
+      {
+        "title": "Learning from enrolment patterns",
+        "text": "I explored collaborative-filtering approaches using nearest neighbours, non-negative matrix factorisation, neural networks and regression and classification methods. I brought the work together in a presentation explaining the analysis and approaches."
+      }
+    ],
+    "tools": [
+      "Exploratory data analysis",
+      "Bag of Words",
+      "K-means",
+      "PCA",
+      "Nearest neighbours",
+      "Matrix factorisation",
+      "Neural networks"
+    ],
+    "closing": "The project compared several ways of making recommendations and presented the work as a capstone study.",
+    "source": [
+      "resume:2"
+    ]
+  },
+  {
+    "slug": "news-classification",
+    "title": "Analysing and classifying news",
+    "organisation": "Natural language processing project",
+    "role": "Machine learning project",
+    "kind": "Project",
+    "period": "Date not specified",
+    "start": null,
+    "end": null,
+    "location": "",
+    "summary": "I compared text-analysis methods and classification models, then brought them into an interactive Streamlit application.",
+    "overview": [
+      "This project explored the classification of fake and real news using natural language processing. I worked on the analysis of the text, the way it was represented for models, and the interface used to explore predictions.",
+      "The work compared traditional machine learning and deep learning models. It also explored how the choice of text representation affected classification."
+    ],
+    "sections": [
+      {
+        "title": "Exploring the text",
+        "text": "I examined readability, word co-occurrence, sentiment, named entities, topics and association rules. This helped describe the dataset before training models."
+      },
+      {
+        "title": "Comparing representations and models",
+        "text": "I used TF-IDF and Word2Vec representations, and evaluated logistic regression, random forests, multilayer perceptrons, recurrent networks, transformers and a fine-tuned BERT model. I built preprocessing steps for tokenisation, vectorisation and padding so the models could handle texts of different lengths."
+      },
+      {
+        "title": "Building an interface for the results",
+        "text": "I created an interactive Streamlit application that brought together multiple models and text-analysis features. It displayed predictions with confidence scores and sentiment categories, making the model outputs easier to inspect."
+      }
+    ],
+    "tools": [
+      "TF-IDF",
+      "Word2Vec",
+      "BERT",
+      "Neural networks",
+      "Text preprocessing",
+      "Streamlit"
+    ],
+    "closing": "The project combined an analysis workflow, model comparisons and an interactive way to explore classification results.",
+    "source": [
+      "resume:2"
+    ]
+  },
+  {
+    "slug": "colony-weight-forecasting",
+    "title": "Forecasting insect colony weight",
+    "organisation": "Time series analysis project",
+    "role": "Data science project",
+    "kind": "Project",
+    "period": "Date not specified",
+    "start": null,
+    "end": null,
+    "location": "",
+    "summary": "I used historical colony and environmental data to forecast weight and explore the results in Power BI.",
+    "overview": [
+      "The aim of this project was to predict an insect colony’s weight over time. I worked with colony and environmental data, explored patterns in the historical records and created additional features for the models."
+    ],
+    "sections": [
+      {
+        "title": "Preparing and exploring the data",
+        "text": "I carried out exploratory data analysis and feature engineering. This helped organise the historical measurements and environmental information for the forecasting work."
+      },
+      {
+        "title": "Comparing forecasts",
+        "text": "I developed models using ARIMA, SARIMA, linear regression, decision trees and other machine learning methods. I evaluated errors using MSE, RMSE and MAPE: different measures of the gap between predicted and observed values."
+      },
+      {
+        "title": "Making the data easier to explore",
+        "text": "I built an interactive Power BI dashboard to visualise historical data and support time series analysis alongside the predictive model."
+      }
+    ],
+    "tools": [
+      "Time series analysis",
+      "ARIMA",
+      "SARIMA",
+      "Regression",
+      "Decision trees",
+      "Power BI"
+    ],
+    "closing": "The deliverables were a predictive model and an interactive dashboard for exploring the time series.",
+    "source": [
+      "resume:2"
+    ]
+  },
+  {
+    "slug": "google-fiber-bi",
+    "title": "Understanding repeat customer calls",
+    "organisation": "Google Fiber · Business Intelligence Capstone",
+    "role": "Capstone project",
+    "kind": "Project",
+    "period": "Date not specified",
+    "start": null,
+    "end": null,
+    "location": "",
+    "summary": "I built a dashboard and supporting documents to examine repeat customer-service calls in the Google Fiber capstone scenario.",
+    "overview": [
+      "This capstone used a Google Fiber customer-service scenario to explore repeat calls. It was a learning project, rather than employment at Google Fiber.",
+      "The work connected a business question with requirements, data processing and dashboard design: which issues were leading to repeated calls, and how did those patterns vary across markets and time?"
+    ],
+    "sections": [
+      {
+        "title": "Defining what the dashboard needed to answer",
+        "text": "I prepared a Stakeholder Requirements Document, a Project Requirements Document and a Planning Document. These set out the questions, requirements and planned work."
+      },
+      {
+        "title": "Working with the data",
+        "text": "I used BigQuery, SQL, Tableau and Google Sheets for data processing and visualisation. The analysis examined call frequency, issue types and trends across markets and time periods."
+      },
+      {
+        "title": "Presenting the patterns",
+        "text": "I designed dashboards that made repeat-call patterns easier to compare. The analysis also considered how those patterns could inform customer-satisfaction improvements within the scenario."
+      }
+    ],
+    "tools": [
+      "BigQuery",
+      "SQL",
+      "Tableau",
+      "Google Sheets",
+      "Requirements documentation"
+    ],
+    "closing": "The project produced structured planning documents and dashboards that explained repeat-call patterns.",
+    "source": [
+      "resume:2"
+    ]
+  }
+];
+
+export const education = [
+  {
+    "id": "masters",
+    "title": "MSc in Data Science",
+    "organisation": "University of Naples Federico II",
+    "period": "Sep 2022 – May 2025",
+    "start": 202209,
+    "end": 202505,
+    "location": "Naples, Italy",
+    "summary": "My master’s programme focused on data science in public administration, economics and management.",
+    "paragraphs": [
+      "I studied the technical and social sides of working with data: how it is stored and analysed, how models are built, and how evidence is used in organisations. My reported result was 88%.",
+      "During the programme, I also built more than 20 AI agents and RAG systems as side projects. This gave me hands-on experience with language models, developer tools and AI frameworks alongside the formal coursework."
+    ],
+    "subjects": [
+      "Data mining and text mining",
+      "Statistical data analysis",
+      "Big data architecture and data management",
+      "Information systems and business intelligence",
+      "Theory and ethics of big data",
+      "Social science methods and economic analysis"
+    ],
+    "source": [
+      "resume:3"
+    ]
+  },
+  {
+    "id": "apple-academy",
+    "title": "Digital Product Development & Management",
+    "organisation": "Apple Developer Academy",
+    "period": "Sep 2023 – Jun 2024",
+    "start": 202309,
+    "end": 202406,
+    "location": "Europe",
+    "summary": "A nine-month programme combining iOS development, design and product thinking.",
+    "paragraphs": [
+      "I worked in international teams on iOS app development, user-centred design, branding, accessibility and prototyping. We used Challenge-based Learning to develop ideas and organise work across disciplines.",
+      "My contributions also included idea validation, business models and value propositions. The programme connected coding and interface development with the decisions involved in taking a product from concept to release."
+    ],
+    "subjects": [
+      "iOS app and interface development",
+      "User-centred design and accessibility",
+      "Prototyping and branding",
+      "Idea validation and business models",
+      "Challenge-based Learning and collaboration"
+    ],
+    "source": [
+      "resume:3"
+    ]
+  },
+  {
+    "id": "bachelors",
+    "title": "BTech in Computer Science Engineering",
+    "organisation": "Amity University · Birkbeck University · Adelphi University",
+    "period": "Aug 2016 – Jul 2020",
+    "start": 201608,
+    "end": 202007,
+    "location": "India · United Kingdom · United States",
+    "summary": "A three-continental computer science programme across India, the UK and the US.",
+    "paragraphs": [
+      "My undergraduate studies took place at Amity University in India, Birkbeck University in London and Adelphi University in New York. The programme provided a foundation in computer science, software development and the systems that applications depend on.",
+      "Alongside my studies, I took part in student organisations, sport and university events. I also completed a website and database development internship at the A.J. Drexel Autism Institute in Philadelphia."
+    ],
+    "subjects": [
+      "Data structures, algorithms and databases",
+      "Operating systems and computer architecture",
+      "Computer networks and distributed systems",
+      "Software engineering and mobile computing",
+      "Python, machine learning and artificial intelligence",
+      "Cloud computing, mathematics and statistics"
+    ],
+    "source": [
+      "resume:3"
+    ]
+  }
 ];
 
 export const credentials = [
-  {title:"Azure AI Engineer Associate",issuer:"Microsoft",date:"June 2025",category:"AI & cloud",source:"resume:3"},
-  {title:"Azure AI Fundamentals",issuer:"Microsoft",date:"June 2025",category:"AI & cloud",source:"resume:3"},
-  {title:"Forward Programme",issuer:"McKinsey & Company",date:"July 2024",category:"Professional development",source:"resume:3"},
-  {title:"Machine Learning Professional Certificate",issuer:"IBM · Coursera",date:"September 2023",category:"Data & analytics",source:"resume:3"},
-  {title:"Cloud Digital Leader Training",issuer:"Google · Coursera",date:"May 2023",category:"AI & cloud",source:"github:achievements.html"},
-  {title:"Business Intelligence Professional Certificate",issuer:"Google · Coursera",date:"April 2023",category:"Data & analytics",source:"resume:3"},
-  {title:"Project Management Professional Certificate",issuer:"Google · Coursera",date:"April 2023",category:"Professional development",source:"github:achievements.html"},
-  {title:"Data Analytics Professional Certificate",issuer:"Google · Coursera",date:"April 2023",category:"Data & analytics",source:"github:achievements.html"},
-  {title:"Risk Management Systems · ISO 31000:2018",issuer:"British Standards Institution",date:"January 2020",category:"Governance & quality",source:"resume:3"},
-  {title:"Quality Management Systems · ISO 9001:2015",issuer:"British Standards Institution",date:"December 2018",category:"Governance & quality",source:"resume:3"},
-  {title:"Salesforce Certified Administrator",issuer:"Salesforce",date:"Date not specified",category:"Enterprise technology",source:"timeline:1"},
-  {title:"Digital Marketing",issuer:"Google",date:"Date not specified",category:"Professional development",source:"timeline:1"}
+  {
+    "id": "azure-ai-engineer",
+    "title": "Microsoft Certified: Azure AI Engineering Associate",
+    "issuer": "Microsoft",
+    "date": "Jun 2025",
+    "start": 202506,
+    "source": [
+      "resume:3"
+    ]
+  },
+  {
+    "id": "azure-ai-fundamentals",
+    "title": "Microsoft Certified: Azure AI Fundamentals",
+    "issuer": "Microsoft",
+    "date": "Jun 2025",
+    "start": 202506,
+    "source": [
+      "resume:3"
+    ]
+  },
+  {
+    "id": "mckinsey-forward",
+    "title": "McKinsey Forward Program",
+    "issuer": "McKinsey & Company",
+    "date": "Jul 2024",
+    "start": 202407,
+    "source": [
+      "resume:3"
+    ]
+  },
+  {
+    "id": "ibm-machine-learning",
+    "title": "IBM Machine Learning Professional Certificate",
+    "issuer": "IBM",
+    "date": "Sep 2023",
+    "start": 202309,
+    "source": [
+      "resume:3"
+    ]
+  },
+  {
+    "id": "google-bi",
+    "title": "Google Business Intelligence",
+    "issuer": "Coursera",
+    "date": "Apr 2023",
+    "start": 202304,
+    "source": [
+      "resume:3"
+    ]
+  },
+  {
+    "id": "risk-management",
+    "title": "Risk Management Systems — ISO 31000:2018",
+    "issuer": "BSI",
+    "date": "Jan 2020",
+    "start": 202001,
+    "source": [
+      "resume:3"
+    ]
+  },
+  {
+    "id": "quality-management",
+    "title": "Quality Management Systems — ISO 9001:2015",
+    "issuer": "BSI",
+    "date": "Dec 2018",
+    "start": 201812,
+    "source": [
+      "resume:3"
+    ]
+  }
 ];
 
-export const skills = [
-  {title:"AI engineering",description:"From grounded retrieval to tool-using agents.",items:["Azure AI Foundry","Azure OpenAI","Azure AI Search","Semantic Kernel","RAG","Agent orchestration"]},
-  {title:"Data & analytics",description:"Reliable data, clear questions, useful insights.",items:["Python","SQL","R","Databricks","Power BI","Tableau","ETL & validation"]},
-  {title:"Research & machine learning",description:"Understanding patterns and evaluating models.",items:["NLP","Scikit-learn","TensorFlow","Keras","Network analysis","Time series"]},
-  {title:"Products & delivery",description:"Connecting implementation with how people work.",items:["Power Automate","Logic Apps","SharePoint","Salesforce","Swift","Figma","Agile & Scrum"]}
-];
-
-export const beyond = [
-  {number:"01",title:"Sport, strategy, and teamwork",description:"Chess, cricket, and carrom have been part of my university experience. At Sangathan, I earned bronze in chess and gold in carrom.",tags:["Chess","Cricket","Carrom"],source:"resume:3"},
-  {number:"02",title:"Helping things happen",description:"At Amity, I volunteered with international guests at Confluence 2017 and helped with organising, management, and security at Amity Youth Fest. These experiences put coordination and responsibility into practice.",tags:["Volunteering","Events","Community"],source:"resume:3;github:about.html"},
-  {number:"03",title:"Learning with different perspectives",description:"Studying across India, the United Kingdom, and the United States, and working with international teams in Italy, has made collaboration across backgrounds a recurring part of my journey.",tags:["International study","Collaboration","Curiosity"],source:"resume:1-3"},
-  {number:"04",title:"Creating room for collaboration",description:"At EFSA, I was a founding member of a trainee-powered Scrum team exploring a platform for ad hoc learning and collaboration opportunities across units.",tags:["Peer learning","Co-creation","Teamwork"],source:"resume:1"}
+export type TimelineItem = {
+  id: string; title: string; organisation: string; period: string; start: number;
+  category: "Work" | "Education" | "Certifications" | "Conference";
+  summary: string; details: string[]; href: string; linkLabel: string;
+};
+export const timeline: TimelineItem[] = [
+  ...work.filter(item => item.kind === "Experience").map(item => ({
+    id: item.slug, title: item.role, organisation: item.organisation, period: item.period,
+    start: item.start!, category: "Work" as const, summary: item.summary,
+    details: item.overview, href: `/work/${item.slug}/`, linkLabel: "Read about this role",
+  })),
+  ...education.map(item => ({
+    id: item.id, title: item.title, organisation: item.organisation, period: item.period,
+    start: item.start, category: "Education" as const, summary: item.summary,
+    details: item.paragraphs, href: `/learning/#${item.id}`, linkLabel: "Read about this programme",
+  })),
+  ...credentials.map(item => ({
+    id: item.id, title: item.title, organisation: item.issuer, period: item.date,
+    start: item.start, category: "Certifications" as const,
+    summary: `${item.issuer} · ${item.date}`,
+    details: [`I completed ${item.title} in ${item.date}.`],
+    href: "/learning/#certifications", linkLabel: "View certifications and programmes",
+  })),
+  {
+    id: "singapore-conference", title: "Technology in business intelligence", organisation: "National University of Singapore · Shaw Foundation",
+    period: "2017", start: 201700, category: "Conference",
+    summary: "I attended the International Conference on the Role of Technology in Business Intelligence.",
+    details: ["I took part in this conference in Singapore during my undergraduate programme. It is one of the academic activities listed alongside my computer science studies."],
+    href: "/learning/#research", linkLabel: "View research and conferences",
+  },
 ];

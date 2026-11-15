@@ -1,6 +1,5 @@
 import Link from "next/link";
-import type { Project } from "@/lib/content";
-
-export function ProjectCard({project,index=0}: {project:Project;index?:number}) {
-  return <Link href={`/work/${project.slug}/`} className="project-card"><div className="card-top"><span className="tag">{project.category}</span><span className="index-label">{String(index+1).padStart(2,"0")}</span></div><p className="project-context">{project.context}</p><h3>{project.title}</h3><p className="project-summary">{project.summary}</p><div className="project-tags">{project.technologies.slice(0,3).map(item => <span key={item}>{item}</span>)}</div><div className="card-bottom"><span>{project.kind}</span><span className="card-link">Explore the work</span></div></Link>;
+import type { WorkItem } from "@/lib/content";
+export function ProjectCard({item}: {item:WorkItem}) {
+ return <article className="work-row"><div className="work-period"><p>{item.kind==="Experience"?item.period:"Project"}</p>{item.location&&<span>{item.location}</span>}</div><div><p className="organisation">{item.organisation}</p><h2><Link href={`/work/${item.slug}/`}>{item.title}</Link></h2><p>{item.summary}</p><Link className="text-link" href={`/work/${item.slug}/`} aria-label={`Read more about ${item.title}`}>Read more</Link></div></article>;
 }

@@ -1,23 +1,16 @@
-# Validation
+# Validation — simplified résumé-based portfolio
 
-Validated on 15 November 2026.
+15 November 2026.
 
-- Production Next.js build passed, including TypeScript checking and static export.
-- Rendered the provided PDF pages and inspected the source text and layout.
-- Inspected the website in the connected browser at the desktop viewport.
-- Verified mobile navigation and every page type at a measured CSS width of 375 pixels; no horizontal overflow or broken images were found.
-- Verified combined project search and context filtering: 'Databricks' + 'Professional work' returned three expected EFSA entries.
-- Verified no-results messaging and reset to all 22 entries.
-- Verified navigation into a project page and its case-study content.
-- Verified education timeline filtering, oldest-first ordering, and expandable details.
-- Verified the copy-email interaction and success state, then restored the initially empty clipboard.
-- No warning/error messages were returned by the browser log check.
-- The résumé download points to the supplied PDF. No email was sent and no external profile or publication was modified.
+- Production build and TypeScript checks passed after the layout and content rewrite.
+- Compared the rewritten content against all three pages of the supplied résumé. Work entries now cover six roles and six résumé projects.
+- Verified the 17-event timeline: Work filter returns six entries; Education returns three; oldest-first orders work start years 2019, 2021, 2024, 2025.
+- Verified expand all, collapse all and individual event expansion. Verified year navigation moves focus and scrolls to the selected year.
+- Verified project search, the no-results message and clearing search back to six projects.
+- Verified mobile navigation opens and closes on navigation.
+- Inspected the home page and timeline visually.
+- Checked all six main pages and the WFP detail page at a measured CSS width of 375 pixels: no horizontal overflow, broken images or duplicate H1 headings.
+- No email was sent. The résumé and professional links are the previously supplied assets and destinations.
+- Static route, asset, anchor and heading checks are recorded in `static-check.json`.
 
-The source and output files are separate from the original OIGI directory. The GitHub Pages production build and TypeScript checks passed. The previous GitHub version is retained on `backup/portfolio-before-2026-11-15`. Publication status is recorded in the chat after the deployment completes.
-
-See the automated static-link check result in `static-check.json` for exported page counts, broken local references, and duplicate/missing headings.
-
-- Removed diagonal upward arrows from buttons, cards, and external profile links.
-- Added GitHub Pages base-path support for routes, JavaScript, CSS, portrait, favicon, and résumé.
-- Added redirects for the six previous HTML section URLs.
+GitHub Pages publication and live verification are reported in the chat once the deployment completes. Earlier pages are retained in Git history, and prior public URLs have redirects where content was consolidated.
