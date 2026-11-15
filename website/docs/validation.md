@@ -24,3 +24,13 @@ GitHub Pages publication and live verification are reported in the chat once the
 - Desktop and mobile homepage and About layouts inspected visually.
 - Static name and local-link checks passed for all 41 exported HTML files.
 - The owner approved publication after reviewing the updated draft.
+
+## Consultant role, résumé titles and homepage H1 — 15 November 2026
+
+- Production GitHub Pages build and TypeScript check passed.
+- Static links, assets, anchors and headings passed for all 42 exported HTML pages.
+- All 19 main and work-detail pages contain one visible occurrence of the full name, in the shared header. Metadata and portrait alternative text retain the name.
+- Seven experience entries use matching titles in Work cards, detail headings and Timeline. Existing titles were checked against the supplied résumé; the consultant title and July 2026–present dates were supplied by the owner.
+- Timeline shows 18 total events and seven Work events. Verified the new consultant entry is first in newest order and last in oldest order, its details expand, and its detail-page link works.
+- Checked the homepage, About, Work, Timeline, consultant detail and longer WFP/EFSA detail headings at 375 CSS pixels with no overflow or broken images. Desktop homepage inspected visually.
+- Homepage H1 is exactly “Enterprise AI Engineer & AI Solutions Architect”.

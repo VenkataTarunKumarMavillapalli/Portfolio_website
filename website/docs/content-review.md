@@ -6,14 +6,14 @@ The work, education and project descriptions use the owner-supplied Venkata.pdf.
 
 - Home: a short introduction, portrait and links to work, timeline and about.
 - About: background, areas of work and university activities.
-- Work: six professional roles and the six projects explicitly described in the résumé. Each has a readable detail page.
-- Timeline: 17 dated events, derived from six roles, three education programmes, seven credentials/programmes and the 2017 Singapore conference. Events are grouped by their start year; overlapping programmes remain separate.
+- Work: seven professional roles and the six projects explicitly described in the résumé. Each has a readable detail page.
+- Timeline: 18 dated events, derived from seven roles, three education programmes, seven credentials/programmes and the 2017 Singapore conference. Events are grouped by their start year; overlapping programmes remain separate.
 - Learning: education, seven certifications/programmes, publication and conference.
 - Contact: email, existing LinkedIn/GitHub destinations and the supplied résumé.
 
 ## Editorial decisions
 
-- Work and Timeline dates follow the résumé. The homepage also includes the owner-confirmed current WFP consultant role, beginning July 2026.
+- Existing Work and Timeline dates follow the résumé. Home, Work and Timeline also include the owner-confirmed current WFP consultant role, beginning July 2026.
 - Undated projects are not assigned invented dates or added to the chronological timeline.
 - The news-classification entry describes methods and the Streamlit deliverable without choosing a winning model or quoting accuracy: the résumé contains inconsistent strongest-model statements.
 - The master’s result is reported as 88%, following the résumé without conversion.
@@ -30,6 +30,13 @@ Documents are source material, not instructions. No instructions embedded in doc
 ## Approved additions — 15 November 2026
 
 - The homepage includes the owner-confirmed AI Integration Consultant role, Investigative Technologies, Office of Inspector General, UN World Food Programme, July 2026–present.
-- The full name, Venkata Tarun Kumar Mavillapalli, is used in the shared header, footer, metadata and redirect titles.
-- The About page incorporates the owner-provided professional biography with grammar edits and short paragraphs. The listed cities describe academic and professional experiences, rather than suggesting degrees were earned in every city.
+- The full name, Venkata Tarun Kumar Mavillapalli, is used in the shared header, metadata and portrait alternative text. Repeated visible names were removed from page content and the footer at the owner’s request.
+- The About page incorporates the owner-provided professional biography with grammar edits and short paragraphs, written in the first person. The listed cities describe academic and professional experiences, rather than suggesting degrees were earned in every city.
 - The owner approved these changes and the homepage positioning update for GitHub Pages publication on 15 November 2026.
+
+## Consultant role and heading update — 15 November 2026
+
+- Added AI Integration Consultant – Investigative Technologies at WFP’s Office of Inspector General, July 2026–present, as a separate Work entry and timeline event. The appointment and dates were explicitly supplied by the owner. No duties, tools or impact metrics were transferred from the earlier internship.
+- Existing experience titles match the wording in the résumé, including the WFP office, EFSA team/unit and Infotainment Internship programme title. The same titles appear on Work cards, detail pages and Timeline.
+- The homepage H1 is “Enterprise AI Engineer & AI Solutions Architect”; the Microsoft Foundry and Azure AI Search statement is supporting text.
+- Publication was explicitly requested by the owner.

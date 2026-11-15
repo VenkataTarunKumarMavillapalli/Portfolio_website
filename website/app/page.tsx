@@ -20,13 +20,14 @@ export default function HomePage() {
       <Shell>
         <div className={`home-layout ${styles.layout}`}>
           <div className={`home-copy ${styles.copy}`}>
-            <p className={styles.name}>{profile.name}</p>
-            <p className={styles.role}>Enterprise AI Engineer &amp; AI Solutions Architect</p>
-
             <h1 id="home-headline" className={styles.headline}>
+              Enterprise AI Engineer &amp; AI Solutions Architect
+            </h1>
+
+            <p className={styles.specialisation}>
               Building secure, production-ready AI agents with <span>Microsoft Foundry</span>,{" "}
               <span>Azure AI Search</span>, and the Microsoft AI ecosystem.
-            </h1>
+            </p>
 
             <p className={`home-intro ${styles.intro}`}>
               I design and develop enterprise AI systems that connect advanced language models
@@ -53,7 +54,6 @@ export default function HomePage() {
 
           <div className="home-portrait">
             <Image src={assetPath("/portrait.png")} alt={profile.name} width={211} height={210} priority/>
-            <p>{profile.name}</p>
           </div>
         </div>
 

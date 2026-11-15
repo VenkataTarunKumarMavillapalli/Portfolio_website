@@ -1,4 +1,4 @@
-// Portfolio content. Biographical claims are drawn only from Venkata.pdf.
+// Portfolio content from the supplied résumé and explicitly confirmed owner updates.
 export type WorkItem = {
   slug: string; title: string; organisation: string; role: string;
   kind: "Experience" | "Project"; period: string; start: number | null; end: number | null;
@@ -43,10 +43,32 @@ export const navigation = [
 
 export const work: WorkItem[] = [
   {
+    "slug": "wfp-ai-integration-consultant",
+    "title": "AI Integration Consultant – Investigative Technologies",
+    "organisation": "World Food Programme · United Nations · Office of Inspector General",
+    "role": "AI Integration Consultant – Investigative Technologies",
+    "kind": "Experience",
+    "period": "Jul 2026 – Present",
+    "start": 202607,
+    "end": null,
+    "location": "",
+    "summary": "I work on AI integration for investigative technologies in WFP’s Office of Inspector General.",
+    "overview": [
+      "Since July 2026, I have been an AI Integration Consultant in Investigative Technologies at the World Food Programme’s Office of Inspector General.",
+      "This role follows my AI engineering internship at WFP, which ran from October 2025 to June 2026."
+    ],
+    "sections": [],
+    "tools": [],
+    "closing": "",
+    "source": [
+      "owner-confirmed:2026-11-15"
+    ]
+  },
+  {
     "slug": "world-food-programme",
-    "title": "AI, reporting and automation at WFP",
+    "title": "AI Engineer Intern - Integration & Investigative Technologies(Office of Inspections and Investigations)",
     "organisation": "World Food Programme · United Nations",
-    "role": "AI Engineer Intern — Integration & Investigative Technologies",
+    "role": "AI Engineer Intern - Integration & Investigative Technologies(Office of Inspections and Investigations)",
     "kind": "Experience",
     "period": "Oct 2025 – Jun 2026",
     "start": 202510,
@@ -96,9 +118,9 @@ export const work: WorkItem[] = [
   },
   {
     "slug": "efsa",
-    "title": "Data quality and internal tools at EFSA",
+    "title": "Data Officer Trainee – Data Management and Analysis Team (Integrated Data Unit)",
     "organisation": "European Food Safety Authority",
-    "role": "Data Officer Trainee — Data Management and Analysis Team",
+    "role": "Data Officer Trainee – Data Management and Analysis Team (Integrated Data Unit)",
     "kind": "Experience",
     "period": "Nov 2024 – Oct 2025",
     "start": 202411,
@@ -146,7 +168,7 @@ export const work: WorkItem[] = [
   },
   {
     "slug": "cryptocurrency-discourse",
-    "title": "Research into cryptocurrency white papers",
+    "title": "Data Science Research Intern",
     "organisation": "University of Naples Federico II",
     "role": "Data Science Research Intern",
     "kind": "Experience",
@@ -188,9 +210,9 @@ export const work: WorkItem[] = [
   },
   {
     "slug": "eeg-model-uncertainty",
-    "title": "Infotainment training and model evaluation",
+    "title": "Infotainment Internship – Ideneers Academy - Italdesign Giugiaro",
     "organisation": "Italdesign Giugiaro · Ideneers Academy",
-    "role": "Infotainment Intern",
+    "role": "Infotainment Internship – Ideneers Academy - Italdesign Giugiaro",
     "kind": "Experience",
     "period": "May 2024 – Aug 2024",
     "start": 202405,
@@ -224,7 +246,7 @@ export const work: WorkItem[] = [
   },
   {
     "slug": "salesforce-and-chatbots",
-    "title": "Salesforce development and customer-service tools",
+    "title": "Associate Salesforce Developer",
     "organisation": "NeuraFlash",
     "role": "Associate Salesforce Developer",
     "kind": "Experience",
@@ -266,7 +288,7 @@ export const work: WorkItem[] = [
   },
   {
     "slug": "drexel-web-development",
-    "title": "Website and database development",
+    "title": "Website & Database Development Intern",
     "organisation": "A.J. Drexel Autism Institute",
     "role": "Website & Database Development Intern",
     "kind": "Experience",

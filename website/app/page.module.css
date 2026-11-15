@@ -12,26 +12,25 @@
   max-width: none;
 }
 
-.name {
-  font-size: 16px;
-  font-weight: 600;
-  letter-spacing: -.02em;
-}
-
-.role {
-  margin-top: 5px;
-  color: var(--blue);
-  font-size: 13px;
-  font-weight: 600;
-  line-height: 1.6;
-}
-
 .homepage .headline {
-  margin: 21px 0 20px;
+  margin: 0 0 20px;
   font-size: clamp(32px, 3.5vw, 42px);
   line-height: 1.18;
   letter-spacing: -.04em;
   text-wrap: pretty;
+}
+
+.specialisation {
+  margin-bottom: 20px;
+  color: var(--ink);
+  font-size: 19px;
+  font-weight: 500;
+  line-height: 1.6;
+  text-wrap: pretty;
+}
+
+.specialisation span {
+  color: var(--blue);
 }
 
 .homepage .intro {
@@ -127,21 +126,14 @@
     gap: 28px;
   }
 
-  .name {
-    max-width: 360px;
-    font-size: 15px;
-    line-height: 1.6;
-  }
-
-  .role {
-    margin-top: 8px;
-    font-size: 12px;
-  }
-
   .homepage .headline {
     font-size: clamp(28px, 7.8vw, 34px);
     line-height: 1.22;
-    margin-top: 20px;
+    margin-top: 0;
+  }
+
+  .specialisation {
+    font-size: 17px;
   }
 
   .homepage .intro {
